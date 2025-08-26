@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse available pets for adoption at Adopt Pets. Find your perfect companion today.">
+    <title>Available Pets - Pet Catalog | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="../profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="../auth.html" class="top-bar-link">Login</a>
+                    <a href="../donate.html" class="top-bar-link">Donate</a>
+                    <a href="../contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="../how-it-works.html">How It Works</a></li>
+                                            <li><a href="../adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="../auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="catalog-hero">
+        <div class="container">
+            <h1>Available Pets for Adoption</h1>
+            <p>Find your perfect companion from our loving pets waiting for their forever homes</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section style="padding: 40px 0;">
+        <div class="container">
+            <div class="catalog-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="clear-filters" id="clearFilters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Search</h4>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search by name or breed...">
+                            <span class="search-icon">🔍</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Species</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterCats" value="cat">
+                                <label for="filterCats">Cats</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterDogs" value="dog">
+                                <label for="filterDogs">Dogs</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Age</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterBaby" value="baby">
+                                <label for="filterBaby">Baby (0-6 months)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterYoung" value="young">
+                                <label for="filterYoung">Young (6 months - 2 years)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterAdult" value="adult">
+                                <label for="filterAdult">Adult (2-7 years)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterSenior" value="senior">
+                                <label for="filterSenior">Senior (7+ years)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Gender</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterMale" value="male">
+                                <label for="filterMale">Male</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterFemale" value="female">
+                                <label for="filterFemale">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="apply-filters-btn" id="applyFilters">Apply Filters</button>
+                </aside>
+
+                <!-- Main Catalog Area -->
+                <main class="catalog-main">
+                    <div class="catalog-controls">
+                        <div class="results-info">
+                            Showing <strong id="resultsCount">12</strong> pets
+                        </div>
+                        <div class="sort-controls">
+                            <label>Sort by:</label>
+                            <select id="sortSelect">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="name">Name (A-Z)</option>
+                                <option value="age">Age</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="pets-grid" id="petsGrid">
+                        <!-- Pet cards will be dynamically loaded here -->
+                    </div>
+
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <div class="icon">🐾</div>
+                        <h3>No pets found</h3>
+                        <p>Try adjusting your filters or search criteria</p>
+                        <button class="btn-primary" onclick="clearAllFilters()">Reset Filters</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="#">Browse Pets</a></li>
+                        <li><a href="../how-it-works.html">Adoption Process</a></li>
+                        <li><a href="../adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pet Care</h4>
+                    <ul>
+                        <li><a href="#">Health Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Filter Toggle -->
+    <button class="mobile-filter-toggle" id="mobileFilterToggle">
+        <span>☰</span>
+        <span>Filters</span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Find Pets</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
+                <li><a href="../shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="../support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="../auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="../js/main-script.js"></script>
+    <script>
+        // Pet data
+        const pets = [
+            {
+                id: 1,
+                name: 'Luna',
+                type: 'Cat',
+                breed: 'Siamese Mix',
+                gender: 'Female',
+                age: '2 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=300&fit=crop',
+                badge: 'urgent',
+                tags: ['playful', 'friendly'],
+                description: 'Luna is a beautiful and gentle Siamese mix who loves to cuddle and play.'
+            },
+            {
+                id: 2,
+                name: 'Max',
+                type: 'Dog',
+                breed: 'Golden Retriever',
+                gender: 'Male',
+                age: '3 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['energetic', 'loyal'],
+                description: 'Max is a friendly and energetic Golden Retriever who loves to play fetch.'
+            },
+            {
+                id: 3,
+                name: 'Bella',
+                type: 'Cat',
+                breed: 'Persian',
+                gender: 'Female',
+                age: '4 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=400&h=300&fit=crop',
+                badge: 'new',
+                tags: ['calm', 'gentle'],
+                description: 'Bella is a gorgeous Persian cat with a calm and loving personality.'
+            },
+            {
+                id: 4,
+                name: 'Charlie',
+                type: 'Dog',
+                breed: 'Labrador Mix',
+                gender: 'Male',
+                age: '5 months',
+                ageCategory: 'baby',
+                image: 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['energetic', 'curious'],
+                description: 'Charlie is an adorable puppy full of energy and love.'
+            },
+            {
+                id: 5,
+                name: 'Mittens',
+                type: 'Cat',
+                breed: 'Tabby',
+                gender: 'Male',
+                age: '1 year',
+                ageCategory: 'young',
+                image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['playful', 'curious'],
+                description: 'Mittens is a young and playful tabby cat who loves to explore.'
+            },
+            {
+                id: 6,
+                name: 'Rocky',
+                type: 'Dog',
+                breed: 'German Shepherd',
+                gender: 'Male',
+                age: '4 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1568572933382-74d440642117?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['loyal', 'protective'],
+                description: 'Rocky is a loyal and protective German Shepherd.'
+            },
+            {
+                id: 7,
+                name: 'Snowball',
+                type: 'Cat',
+                breed: 'Ragdoll',
+                gender: 'Female',
+                age: '3 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['gentle', 'calm'],
+                description: 'Snowball is a beautiful Ragdoll cat with striking blue eyes.'
+            },
+            {
+                id: 8,
+                name: 'Buddy',
+                type: 'Dog',
+                breed: 'Beagle',
+                gender: 'Male',
+                age: '2 years',
+                ageCategory: 'young',
+                image: 'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=400&h=300&fit=crop',
+                badge: 'urgent',
+                tags: ['friendly', 'curious'],
+                description: 'Buddy is a friendly Beagle with a great nose for adventure.'
+            },
+            {
+                id: 9,
+                name: 'Shadow',
+                type: 'Cat',
+                breed: 'Black Cat',
+                gender: 'Male',
+                age: '8 years',
+                ageCategory: 'senior',
+                image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400&h=300&fit=crop',
+                badge: 'urgent',
+                tags: ['calm', 'quiet'],
+                description: 'Shadow is a senior cat looking for a quiet retirement home.'
+            },
+            {
+                id: 10,
+                name: 'Daisy',
+                type: 'Dog',
+                breed: 'Poodle Mix',
+                gender: 'Female',
+                age: '1 year',
+                ageCategory: 'young',
+                image: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=400&h=300&fit=crop',
+                badge: 'new',
+                tags: ['intelligent', 'friendly'],
+                description: 'Daisy is a sweet and intelligent Poodle mix.'
+            },
+            {
+                id: 11,
+                name: 'Whiskers',
+                type: 'Cat',
+                breed: 'Maine Coon Mix',
+                gender: 'Male',
+                age: '5 years',
+                ageCategory: 'adult',
+                image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['gentle', 'social'],
+                description: 'Whiskers is a large and majestic Maine Coon mix.'
+            },
+            {
+                id: 12,
+                name: 'Cooper',
+                type: 'Dog',
+                breed: 'Border Collie',
+                gender: 'Male',
+                age: '2 years',
+                ageCategory: 'young',
+                image: 'https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?w=400&h=300&fit=crop',
+                badge: null,
+                tags: ['intelligent', 'energetic'],
+                description: 'Cooper is an incredibly smart Border Collie who needs mental stimulation.'
+            }
+        ];
+
+        // Current filter state
+        let currentFilters = {
+            search: '',
+            species: [],
+            age: [],
+            gender: []
+        };
+
+        // Render pets function
+        function renderPets(petsToRender) {
+            const petsGrid = document.getElementById('petsGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (petsToRender.length === 0) {
+                petsGrid.style.display = 'none';
+                emptyState.style.display = 'block';
+                document.getElementById('resultsCount').textContent = '0';
+                return;
+            }
+            
+            petsGrid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            petsGrid.innerHTML = '';
+            
+            petsToRender.forEach(pet => {
+                const card = document.createElement('div');
+                card.className = 'pet-card';
+                card.innerHTML = `
+                    <div class="pet-image">
+                        <img src="${pet.image}" alt="${pet.name}">
+                        ${pet.badge ? `<span class="pet-badge ${pet.badge === 'new' ? 'new' : ''}">${pet.badge}</span>` : ''}
+                        <button class="favorite-btn" data-id="${pet.id}">♡</button>
+                    </div>
+                    <div class="pet-info">
+                        <h3>${pet.name}</h3>
+                        <p class="pet-details">${pet.breed} • ${pet.gender} • ${pet.age}</p>
+                        <div class="pet-tags">
+                            ${pet.tags.map(tag => `<span class="pet-tag">${tag}</span>`).join('')}
+                        </div>
+                        <p class="pet-description">${pet.description}</p>
+                        <a href="details.html?pet=${pet.name.toLowerCase()}" class="meet-btn" data-id="${pet.id}">Meet ${pet.name}</a>
+                    </div>
+                `;
+                petsGrid.appendChild(card);
+            });
+            
+            document.getElementById('resultsCount').textContent = petsToRender.length;
+            
+            // Add event listeners
+            document.querySelectorAll('.pet-card').forEach(card => {
+                // Make entire card clickable
+                card.addEventListener('click', function(e) {
+                    // Check if click was not on favorite button
+                    if (!e.target.closest('.favorite-btn')) {
+                        // Navigate to details page
+                        const petName = card.querySelector('h3').textContent;
+                        window.location.href = `details.html?pet=${petName.toLowerCase()}`;
+                    }
+                });
+                
+                // Handle favorite button separately
+                const favoriteBtn = card.querySelector('.favorite-btn');
+                if (favoriteBtn) {
+                    favoriteBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        this.classList.toggle('active');
+                        this.textContent = this.classList.contains('active') ? '❤️' : '♡';
+                    });
+                }
+            });
+        }
+
+        // Filter pets function
+        function filterPets() {
+            let filtered = [...pets];
+            
+            // Search filter
+            if (currentFilters.search) {
+                const searchTerm = currentFilters.search.toLowerCase();
+                filtered = filtered.filter(pet => 
+                    pet.name.toLowerCase().includes(searchTerm) ||
+                    pet.breed.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            // Species filter
+            if (currentFilters.species.length > 0) {
+                filtered = filtered.filter(pet => 
+                    currentFilters.species.includes(pet.type.toLowerCase())
+                );
+            }
+            
+            // Age filter
+            if (currentFilters.age.length > 0) {
+                filtered = filtered.filter(pet => 
+                    currentFilters.age.includes(pet.ageCategory)
+                );
+            }
+            
+            // Gender filter
+            if (currentFilters.gender.length > 0) {
+                filtered = filtered.filter(pet => 
+                    currentFilters.gender.includes(pet.gender.toLowerCase())
+                );
+            }
+            
+            return filtered;
+        }
+
+        // Apply filters
+        function applyFilters() {
+            currentFilters.species = [];
+            currentFilters.age = [];
+            currentFilters.gender = [];
+            
+            if (document.getElementById('filterCats').checked) {
+                currentFilters.species.push('cat');
+            }
+            if (document.getElementById('filterDogs').checked) {
+                currentFilters.species.push('dog');
+            }
+            
+            if (document.getElementById('filterBaby').checked) {
+                currentFilters.age.push('baby');
+            }
+            if (document.getElementById('filterYoung').checked) {
+                currentFilters.age.push('young');
+            }
+            if (document.getElementById('filterAdult').checked) {
+                currentFilters.age.push('adult');
+            }
+            if (document.getElementById('filterSenior').checked) {
+                currentFilters.age.push('senior');
+            }
+            
+            if (document.getElementById('filterMale').checked) {
+                currentFilters.gender.push('male');
+            }
+            if (document.getElementById('filterFemale').checked) {
+                currentFilters.gender.push('female');
+            }
+            
+            const filtered = filterPets();
+            renderPets(filtered);
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+            document.getElementById('searchInput').value = '';
+            currentFilters = {
+                search: '',
+                species: [],
+                age: [],
+                gender: []
+            };
+            renderPets(pets);
+        }
+
+        // Sort pets
+        function sortPets(petsToSort, sortBy) {
+            const sorted = [...petsToSort];
+            
+            switch(sortBy) {
+                case 'name':
+                    sorted.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'age':
+                    const ageOrder = ['baby', 'young', 'adult', 'senior'];
+                    sorted.sort((a, b) => ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory));
+                    break;
+                case 'oldest':
+                    sorted.reverse();
+                    break;
+                // 'newest' is default order
+            }
+            
+            return sorted;
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial render
+            renderPets(pets);
+            
+            // Apply filters button
+            document.getElementById('applyFilters').addEventListener('click', applyFilters);
+            
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+            
+            // Search input
+            document.getElementById('searchInput').addEventListener('input', function(e) {
+                currentFilters.search = e.target.value;
+                const filtered = filterPets();
+                renderPets(filtered);
+            });
+            
+            // Sort select
+            document.getElementById('sortSelect').addEventListener('change', function(e) {
+                const filtered = filterPets();
+                const sorted = sortPets(filtered, e.target.value);
+                renderPets(sorted);
+            });
+            
+            // Mobile filter toggle
+            const mobileFilterToggle = document.getElementById('mobileFilterToggle');
+            const filtersSidebar = document.getElementById('filtersSidebar');
+            
+            if (mobileFilterToggle) {
+                mobileFilterToggle.addEventListener('click', function() {
+                    filtersSidebar.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

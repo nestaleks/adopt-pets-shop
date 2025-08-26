@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop for pet supplies, food, toys, and accessories at Adopt Pets.">
+    <title>Pet Shop - Supplies & Accessories | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="top-bar-item">🚚 Free Shipping on Orders Over $50</span>
+                    <span class="top-bar-item">📞 1-800-PETLOVE</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="../profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="../auth.html" class="top-bar-link">Login</a>
+                    <a href="../donate.html" class="top-bar-link">Donate</a>
+                    <a href="../contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="../how-it-works.html">How It Works</a></li>
+                                            <li><a href="../adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="catalog.html" class="nav-link active">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="btn-cart" onclick="toggleCart()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="../auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1>Pet Shop</h1>
+            <p>Everything your pet needs - food, toys, accessories, and more!</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section style="padding: 40px 0;">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="shop-sidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="clear-filters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Category</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterFood" value="food">
+                                <label for="filterFood">Food & Treats</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterToys" value="toys">
+                                <label for="filterToys">Toys</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterAccessories" value="accessories">
+                                <label for="filterAccessories">Accessories</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterGrooming" value="grooming">
+                                <label for="filterGrooming">Grooming</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterHealth" value="health">
+                                <label for="filterHealth">Health & Wellness</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Pet Type</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="forDogs" value="dogs">
+                                <label for="forDogs">For Dogs</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="forCats" value="cats">
+                                <label for="forCats">For Cats</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="forBirds" value="birds">
+                                <label for="forBirds">For Birds</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="forRabbits" value="rabbits">
+                                <label for="forRabbits">For Rabbits</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="number" class="price-input" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" class="price-input" placeholder="Max" min="0">
+                        </div>
+                    </div>
+
+                    <button class="apply-filters-btn">Apply Filters</button>
+                </aside>
+
+                <!-- Main Shop Area -->
+                <main class="shop-main">
+                    <div class="shop-controls">
+                        <div class="results-info">
+                            Showing <strong>24</strong> products
+                        </div>
+                        <div class="sort-controls">
+                            <label>Sort by:</label>
+                            <select>
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name (A-Z)</option>
+                                <option value="rating">Best Rating</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="category-pills">
+                        <button class="category-pill active">All Products</button>
+                        <button class="category-pill">Food & Treats</button>
+                        <button class="category-pill">Toys</button>
+                        <button class="category-pill">Accessories</button>
+                        <button class="category-pill">Grooming</button>
+                        <button class="category-pill">Health</button>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Product Card 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=400&h=300&fit=crop" alt="Premium Dog Food">
+                                <span class="product-badge">Sale</span>
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Food & Treats</div>
+                                <h3 class="product-name">Premium Dog Food</h3>
+                                <p class="product-description">High-quality nutrition for adult dogs with real chicken and vegetables</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(124)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$29.99</span>
+                                    <span class="price-original">$39.99</span>
+                                    <span class="price-discount">-25%</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=400&h=300&fit=crop" alt="Interactive Cat Toy">
+                                <span class="product-badge new">New</span>
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Toys</div>
+                                <h3 class="product-name">Interactive Cat Toy</h3>
+                                <p class="product-description">Keep your cat entertained with this automatic laser toy</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(89)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$19.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=400&h=300&fit=crop" alt="Cozy Pet Bed">
+                                <span class="product-badge bestseller">Bestseller</span>
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Accessories</div>
+                                <h3 class="product-name">Cozy Pet Bed</h3>
+                                <p class="product-description">Ultra-soft and comfortable bed for dogs and cats</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(256)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$45.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?w=400&h=300&fit=crop" alt="Pet Grooming Kit">
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Grooming</div>
+                                <h3 class="product-name">Complete Grooming Kit</h3>
+                                <p class="product-description">Professional grooming tools for home use</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(67)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$34.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?w=400&h=300&fit=crop" alt="Dog Leash">
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Accessories</div>
+                                <h3 class="product-name">Retractable Dog Leash</h3>
+                                <p class="product-description">5-meter retractable leash with comfortable grip</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(183)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$24.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=400&h=300&fit=crop" alt="Cat Treats">
+                                <span class="product-badge">Sale</span>
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Food & Treats</div>
+                                <h3 class="product-name">Gourmet Cat Treats</h3>
+                                <p class="product-description">Delicious salmon-flavored treats your cat will love</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(92)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$7.99</span>
+                                    <span class="price-original">$9.99</span>
+                                    <span class="price-discount">-20%</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=400&h=300&fit=crop" alt="Pet Carrier">
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Accessories</div>
+                                <h3 class="product-name">Travel Pet Carrier</h3>
+                                <p class="product-description">Airline-approved carrier for safe and comfortable travel</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(145)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$59.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1493916665398-143bdeabe500?w=400&h=300&fit=crop" alt="Bird Seeds">
+                                <span class="product-badge new">New</span>
+                                <button class="add-to-cart-quick">🛒</button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Food & Treats</div>
+                                <h3 class="product-name">Premium Bird Seed Mix</h3>
+                                <p class="product-description">Nutritious blend for all types of pet birds</p>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(34)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price-current">$12.99</span>
+                                </div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Features -->
+    <section class="shop-features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Quality Products</h3>
+                    <p>Trusted brands only</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Guaranteed lowest prices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+            <p style="text-align: center; color: var(--color-subtext); padding: 40px;">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-amount">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <a href="checkout.html" class="btn-checkout">Checkout</a>
+                <button class="btn-continue" onclick="toggleCart()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new products and exclusive offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Food & Treats</a></li>
+                        <li><a href="#">Toys</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Grooming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="../pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="../how-it-works.html">How It Works</a></li>
+                        <li><a href="../adoption-form.html">Application</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ shop@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pets/catalog.html">Find Pets</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
+                <li><a href="catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="../support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="../auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="../js/main-script.js"></script>
+    <script>
+        // Cart functionality
+        let cartItems = [];
+        let cartCount = 0;
+        
+        function toggleCart() {
+            const cartSidebar = document.getElementById('cartSidebar');
+            cartSidebar.classList.toggle('active');
+        }
+        
+        function updateCartCount() {
+            document.getElementById('cartCount').textContent = cartCount;
+        }
+        
+        // Add to cart buttons
+        document.querySelectorAll('.add-to-cart-btn, .add-to-cart-quick').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                cartCount++;
+                updateCartCount();
+                
+                // Show a temporary notification
+                const notification = document.createElement('div');
+                notification.textContent = 'Added to cart!';
+                notification.style.cssText = 'position: fixed; top: 100px; right: 20px; background: var(--color-green); color: white; padding: 15px 25px; border-radius: 8px; z-index: 3000; animation: slideIn 0.3s ease;';
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 2000);
+            });
+        });
+        
+        // Category pills
+        document.querySelectorAll('.category-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                // In a real app, this would filter products
+            });
+        });
+        
+        // Clear filters
+        document.querySelector('.clear-filters').addEventListener('click', function() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.price-input').forEach(input => input.value = '');
+        });
+        
+        // Make product cards clickable
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't navigate if clicking on buttons
+                if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                    return;
+                }
+                // Navigate to product details page
+                window.location.href = 'product.html';
+            });
+        });
+    </script>
+</body>
+</html>

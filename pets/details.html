@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View details about this adorable pet available for adoption at Adopt Pets.">
+    <title>Pet Details - Max | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="../profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="../auth.html" class="top-bar-link">Login</a>
+                    <a href="../donate.html" class="top-bar-link">Donate</a>
+                    <a href="../contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="../how-it-works.html">How It Works</a></li>
+                                            <li><a href="../adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="../auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="catalog.html">Available Pets</a>
+                <span>/</span>
+                <span>Max</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Pet Details -->
+    <div class="pet-details-wrapper">
+        <div class="container">
+            <div class="pet-details-layout">
+                <!-- Gallery -->
+                <div class="pet-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=600&h=500&fit=crop" alt="Max">
+                        <div class="image-badges">
+                            <span class="image-badge new">New</span>
+                            <span class="image-badge">Friendly</span>
+                        </div>
+                        <button class="favorite-btn" id="favoriteBtn">❤️</button>
+                    </div>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=150&h=100&fit=crop" alt="Max photo 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=150&h=100&fit=crop" alt="Max photo 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=150&h=100&fit=crop" alt="Max photo 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?w=150&h=100&fit=crop" alt="Max photo 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div class="pet-info">
+                    <div class="pet-header">
+                        <h1 class="pet-name">Max</h1>
+                        <div class="pet-tags">
+                            <span class="pet-tag species">🐕 Dog</span>
+                            <span class="pet-tag gender">♂ Male</span>
+                            <span class="pet-tag age">2 Years Old</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-info">
+                        <div class="info-item">
+                            <span class="info-label">Breed:</span>
+                            <span class="info-value">Golden Retriever</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Size:</span>
+                            <span class="info-value">Large (60-70 lbs)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Color:</span>
+                            <span class="info-value">Golden</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">City Animal Shelter</span>
+                        </div>
+                    </div>
+
+                    <div class="pet-section">
+                        <h2>About Max</h2>
+                        <p class="pet-description">
+                            Meet Max, a lovable Golden Retriever with a heart of gold! This friendly boy is 2 years old and looking for his forever home. Max is the perfect companion for an active family who loves outdoor adventures. He's house-trained, knows basic commands, and gets along wonderfully with children and other dogs.
+                        </p>
+                        <p class="pet-description">
+                            Max came to us when his previous family had to relocate overseas. He's adjusted well to shelter life but is eager to find a new family to call his own. His favorite activities include playing fetch, swimming, and cuddling on the couch after a long day of play.
+                        </p>
+                    </div>
+
+                    <div class="pet-section">
+                        <h3>Personality Traits</h3>
+                        <div class="personality-traits">
+                            <span class="trait-tag">🎾 Playful</span>
+                            <span class="trait-tag">❤️ Affectionate</span>
+                            <span class="trait-tag">🏃 Energetic</span>
+                            <span class="trait-tag">🤝 Loyal</span>
+                            <span class="trait-tag">😊 Gentle</span>
+                            <span class="trait-tag">🧠 Smart</span>
+                        </div>
+                    </div>
+
+                    <div class="pet-section">
+                        <h3>Good With</h3>
+                        <div class="compatibility-grid">
+                            <div class="compatibility-card yes">
+                                ✓ Children
+                            </div>
+                            <div class="compatibility-card yes">
+                                ✓ Other Dogs
+                            </div>
+                            <div class="compatibility-card maybe">
+                                ? Cats
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pet-section">
+                        <h3>Health Status</h3>
+                        <div class="health-badges">
+                            <div class="health-badge">
+                                <span class="icon">💉</span>
+                                <span>Fully Vaccinated</span>
+                            </div>
+                            <div class="health-badge">
+                                <span class="icon">✂️</span>
+                                <span>Neutered</span>
+                            </div>
+                            <div class="health-badge">
+                                <span class="icon">🏥</span>
+                                <span>Health Checked</span>
+                            </div>
+                            <div class="health-badge">
+                                <span class="icon">💊</span>
+                                <span>Microchipped</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adoption-box">
+                        <div class="adoption-fee">
+                            <span class="fee-label">Adoption Fee:</span>
+                            <span class="fee-amount">$150</span>
+                        </div>
+                        <p class="fee-note">This fee helps cover vaccinations, neutering, microchipping, and care</p>
+                        <div class="action-buttons">
+                            <a href="../adoption-form.html" class="btn-adopt">Adopt Max!</a>
+                            <button class="btn-share" onclick="shareProfile()">Share</button>
+                        </div>
+                    </div>
+
+                    <div class="shelter-info">
+                        <h3>Shelter Information</h3>
+                        <div class="shelter-name">City Animal Shelter</div>
+                        <div class="shelter-details">
+                            <p>📍 123 Main Street, City, State 12345</p>
+                            <p>📞 (555) 123-4567</p>
+                            <p>✉️ shelter@cityanimalshelter.org</p>
+                            <p>🕐 Mon-Fri: 9AM-6PM | Sat-Sun: 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Products Section -->
+    <section class="recommended-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything Max Needs</h2>
+                <a href="../shop/catalog.html" class="link-more">Shop All Products →</a>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=300&h=300&fit=crop" alt="Premium Dog Food">
+                        <span class="product-badge bestseller">Bestseller</span>
+                        <button class="product-quick-view">Quick View</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Adult Dog Food</h3>
+                        <p class="product-brand">NutriPet</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(125)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">$45.99</span>
+                            <span class="price-old">$52.99</span>
+                        </div>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=300&h=300&fit=crop" alt="Dog Toys Set">
+                        <span class="product-badge sale">-20%</span>
+                        <button class="product-quick-view">Quick View</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Interactive Dog Toys Set</h3>
+                        <p class="product-brand">PlayPaws</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">$23.99</span>
+                            <span class="price-old">$29.99</span>
+                        </div>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1527698266440-12104e498b76?w=300&h=300&fit=crop" alt="Dog Collar">
+                        <span class="product-badge new">New</span>
+                        <button class="product-quick-view">Quick View</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Adjustable Dog Collar - Large</h3>
+                        <p class="product-brand">ComfortPet</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐ <span>(67)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">$18.99</span>
+                        </div>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?w=300&h=300&fit=crop" alt="Dog Bed">
+                        <button class="product-quick-view">Quick View</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Orthopedic Dog Bed - XL</h3>
+                        <p class="product-brand">DreamPaws</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">$89.99</span>
+                        </div>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Pets -->
+    <section class="similar-pets">
+        <div class="container">
+            <h2>Similar Pets You Might Like</h2>
+            <div class="similar-grid">
+                <!-- Pet Card 1 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=400&h=280&fit=crop" alt="Buddy">
+                        <span class="pet-badge">Puppy</span>
+                        <button class="favorite-btn">❤️</button>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Buddy</h3>
+                        <p class="pet-details">Beagle • Male • 6 months</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag">Playful</span>
+                            <span class="pet-tag">Friendly</span>
+                        </div>
+                        <p class="pet-description">Adorable Beagle puppy looking for a loving home...</p>
+                        <button class="meet-btn">Meet Buddy</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 2 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=280&fit=crop" alt="Charlie">
+                        <span class="pet-badge new">New</span>
+                        <button class="favorite-btn">❤️</button>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Charlie</h3>
+                        <p class="pet-details">Labrador • Male • 3 years</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag">Calm</span>
+                            <span class="pet-tag">Trained</span>
+                        </div>
+                        <p class="pet-description">Gentle Labrador who loves swimming and walks...</p>
+                        <button class="meet-btn">Meet Charlie</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 3 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=280&fit=crop" alt="Rocky">
+                        <span class="pet-badge">Active</span>
+                        <button class="favorite-btn">❤️</button>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Rocky</h3>
+                        <p class="pet-details">Husky • Male • 1 year</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag">Energetic</span>
+                            <span class="pet-tag">Smart</span>
+                        </div>
+                        <p class="pet-description">Young Husky needs an active family who loves adventure...</p>
+                        <button class="meet-btn">Meet Rocky</button>
+                    </div>
+                </div>
+
+                <!-- Pet Card 4 -->
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&h=280&fit=crop" alt="Duke">
+                        <span class="pet-badge">Trained</span>
+                        <button class="favorite-btn">❤️</button>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Duke</h3>
+                        <p class="pet-details">German Shepherd • Male • 4 years</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag">Loyal</span>
+                            <span class="pet-tag">Protective</span>
+                        </div>
+                        <p class="pet-description">Well-trained German Shepherd, perfect for families...</p>
+                        <button class="meet-btn">Meet Duke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="catalog.html">Browse Pets</a></li>
+                        <li><a href="../how-it-works.html">Adoption Process</a></li>
+                        <li><a href="../adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pet Care</h4>
+                    <ul>
+                        <li><a href="#">Health Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Find Pets</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
+                <li><a href="../shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="../support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="../auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="../js/main-script.js"></script>
+    <script>
+        // Determine pet type from page content
+        function getPetType() {
+            // Check for pet type in tags or description
+            const petTags = document.querySelector('.pet-tag.species')?.textContent.toLowerCase() || '';
+            if (petTags.includes('dog') || petTags.includes('🐕')) {
+                return 'dog';
+            } else if (petTags.includes('cat') || petTags.includes('🐈')) {
+                return 'cat';
+            }
+            return 'dog'; // default
+        }
+
+        // Update recommended products based on pet type
+        function updateRecommendedProducts() {
+            const petType = getPetType();
+            const petName = document.querySelector('.pet-name')?.textContent || 'Your Pet';
+            const productsSection = document.querySelector('.recommended-products h2');
+            
+            if (productsSection) {
+                productsSection.textContent = `Everything ${petName} Needs`;
+            }
+            
+            // Product data for different pet types
+            const productData = {
+                dog: [
+                    {
+                        name: 'Premium Adult Dog Food',
+                        brand: 'NutriPet',
+                        image: 'https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=300&h=300&fit=crop',
+                        price: '$45.99',
+                        oldPrice: '$52.99',
+                        badge: 'bestseller',
+                        rating: '(125)'
+                    },
+                    {
+                        name: 'Interactive Dog Toys Set',
+                        brand: 'PlayPaws',
+                        image: 'https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=300&h=300&fit=crop',
+                        price: '$23.99',
+                        oldPrice: '$29.99',
+                        badge: 'sale',
+                        rating: '(89)'
+                    },
+                    {
+                        name: 'Adjustable Dog Collar - Large',
+                        brand: 'ComfortPet',
+                        image: 'https://images.unsplash.com/photo-1527698266440-12104e498b76?w=300&h=300&fit=crop',
+                        price: '$18.99',
+                        badge: 'new',
+                        rating: '(67)'
+                    },
+                    {
+                        name: 'Orthopedic Dog Bed - XL',
+                        brand: 'DreamPaws',
+                        image: 'https://images.unsplash.com/photo-1560743641-3914f2c45636?w=300&h=300&fit=crop',
+                        price: '$89.99',
+                        rating: '(203)'
+                    }
+                ],
+                cat: [
+                    {
+                        name: 'Premium Cat Food - Salmon',
+                        brand: 'FelineGourmet',
+                        image: 'https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=300&h=300&fit=crop',
+                        price: '$32.99',
+                        oldPrice: '$39.99',
+                        badge: 'bestseller',
+                        rating: '(156)'
+                    },
+                    {
+                        name: 'Cat Scratching Post',
+                        brand: 'KittyPlay',
+                        image: 'https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=300&h=300&fit=crop',
+                        price: '$45.99',
+                        badge: 'new',
+                        rating: '(98)'
+                    },
+                    {
+                        name: 'Interactive Cat Laser Toy',
+                        brand: 'SmartPet',
+                        image: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=300&h=300&fit=crop',
+                        price: '$19.99',
+                        badge: 'sale',
+                        rating: '(234)'
+                    },
+                    {
+                        name: 'Cozy Cat Bed',
+                        brand: 'CatComfort',
+                        image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=300&h=300&fit=crop',
+                        price: '$35.99',
+                        rating: '(167)'
+                    }
+                ]
+            };
+            
+            // Update products if pet type is cat
+            if (petType === 'cat') {
+                const products = productData.cat;
+                const productCards = document.querySelectorAll('.recommended-products .product-card');
+                
+                productCards.forEach((card, index) => {
+                    if (products[index]) {
+                        const product = products[index];
+                        
+                        // Update image
+                        const img = card.querySelector('.product-image img');
+                        if (img) img.src = product.image;
+                        
+                        // Update name
+                        const name = card.querySelector('.product-info h3');
+                        if (name) name.textContent = product.name;
+                        
+                        // Update brand
+                        const brand = card.querySelector('.product-brand');
+                        if (brand) brand.textContent = product.brand;
+                        
+                        // Update price
+                        const priceElement = card.querySelector('.price-current');
+                        if (priceElement) priceElement.textContent = product.price;
+                        
+                        // Update old price
+                        const oldPriceElement = card.querySelector('.price-old');
+                        if (oldPriceElement && product.oldPrice) {
+                            oldPriceElement.textContent = product.oldPrice;
+                        } else if (oldPriceElement) {
+                            oldPriceElement.style.display = 'none';
+                        }
+                        
+                        // Update rating
+                        const rating = card.querySelector('.product-rating span');
+                        if (rating) rating.textContent = product.rating;
+                    }
+                });
+            }
+        }
+
+        // Call on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateRecommendedProducts();
+        });
+    </script>
+    <script>
+        // Gallery functionality
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('mainImage');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Remove active class from all
+                thumbnails.forEach(t => t.classList.remove('active'));
+                // Add active to clicked
+                this.classList.add('active');
+                // Change main image
+                const newSrc = this.querySelector('img').src.replace('w=150&h=100', 'w=600&h=500');
+                mainImage.src = newSrc;
+            });
+        });
+
+        // Favorite button
+        document.getElementById('favoriteBtn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            // In a real app, this would save to user's favorites
+        });
+
+        // Share functionality
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Check out Max for adoption!',
+                    text: 'I found this adorable Golden Retriever available for adoption',
+                    url: window.location.href
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                alert('Share link copied to clipboard!');
+                navigator.clipboard.writeText(window.location.href);
+            }
+        }
+
+        // Similar pets cards
+        document.querySelectorAll('.similar-grid .pet-card').forEach(card => {
+            // Make entire card clickable
+            card.addEventListener('click', function(e) {
+                // Check if click was on favorite button
+                if (!e.target.closest('.favorite-btn')) {
+                    // In a real app, this would navigate to the pet's detail page
+                    window.location.href = 'details.html';
+                }
+            });
+            
+            // Handle favorite button separately
+            card.querySelector('.favorite-btn').addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

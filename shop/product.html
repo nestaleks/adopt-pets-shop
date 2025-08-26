@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Dog Food - High-quality nutrition for your pet at Adopt Pets Shop.">
+    <title>Premium Dog Food - Product Details | Adopt Pets Shop</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="top-bar-item">🚚 Free Shipping on Orders Over $50</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="../profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="../auth.html" class="top-bar-link">Login</a>
+                    <a href="#" class="top-bar-link">Track Order</a>
+                    <a href="#" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="../pets/catalog.html" class="nav-link">Find Pets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="catalog.html" class="nav-link active">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="btn-cart" onclick="toggleCart()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <a href="../auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="catalog.html">Shop</a>
+                <span>/</span>
+                <a href="#">Dog Food</a>
+                <span>/</span>
+                <span>Premium Adult Dog Food</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details-wrapper">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600&h=600&fit=crop" alt="Premium Dog Food">
+                        <span class="discount-badge">-25%</span>
+                    </div>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=150&h=150&fit=crop" alt="Product view 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=150&h=150&fit=crop" alt="Product view 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?w=150&h=150&fit=crop" alt="Product view 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=150&h=150&fit=crop" alt="Product view 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <div class="product-brand">NutriPet</div>
+                        <h1 class="product-title">Premium Adult Dog Food - Chicken & Rice Formula</h1>
+                        <div class="product-rating">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <span class="rating-text">4.8 out of 5</span>
+                            <span class="review-count">(234 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="product-pricing">
+                        <div class="price-group">
+                            <span class="price-current">$45.99</span>
+                            <span class="price-original">$61.99</span>
+                            <span class="price-save">Save $16.00</span>
+                        </div>
+                        <div class="stock-status in-stock">
+                            ✓ In Stock - Ships within 24 hours
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Size:</label>
+                            <div class="size-options">
+                                <button class="size-option">5 lb</button>
+                                <button class="size-option active">15 lb</button>
+                                <button class="size-option">30 lb</button>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Add to Cart
+                        </button>
+                        <button class="btn-buy-now">Buy Now</button>
+                        <button class="btn-wishlist">❤️</button>
+                    </div>
+
+                    <div class="product-highlights">
+                        <h3>Product Highlights</h3>
+                        <ul>
+                            <li>✓ Real chicken as the first ingredient</li>
+                            <li>✓ Fortified with vitamins and minerals</li>
+                            <li>✓ No artificial colors or preservatives</li>
+                            <li>✓ Supports healthy digestion</li>
+                            <li>✓ Promotes shiny coat and healthy skin</li>
+                        </ul>
+                    </div>
+
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <span class="icon">🚚</span>
+                            <div>
+                                <strong>Free Shipping</strong>
+                                <p>On orders over $50</p>
+                            </div>
+                        </div>
+                        <div class="shipping-item">
+                            <span class="icon">🔄</span>
+                            <div>
+                                <strong>30-Day Returns</strong>
+                                <p>Easy returns & refunds</p>
+                            </div>
+                        </div>
+                        <div class="shipping-item">
+                            <span class="icon">🛡️</span>
+                            <div>
+                                <strong>Secure Payment</strong>
+                                <p>100% secure checkout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+                    <button class="tab-btn" data-tab="feeding">Feeding Guide</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (234)</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p>Give your adult dog the nutrition they deserve with NutriPet Premium Adult Dog Food. Our carefully crafted chicken and rice formula provides complete and balanced nutrition for adult dogs of all breeds.</p>
+                        <p>Made with real chicken as the first ingredient, this premium formula delivers high-quality protein to support strong muscles and overall health. The easily digestible rice provides essential carbohydrates for energy, while our blend of fruits and vegetables adds natural vitamins and antioxidants.</p>
+                        
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Supports healthy digestion with prebiotics and probiotics</li>
+                            <li>Promotes a shiny coat and healthy skin with omega fatty acids</li>
+                            <li>Maintains strong bones and teeth with calcium and phosphorus</li>
+                            <li>Boosts immune system with antioxidants and vitamins</li>
+                            <li>No corn, wheat, or soy - great for sensitive stomachs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="ingredients">
+                        <h3>Ingredients</h3>
+                        <p><strong>Main Ingredients:</strong> Chicken, Chicken Meal, Brown Rice, Barley, Oatmeal, Chicken Fat (preserved with Mixed Tocopherols), Flaxseed, Natural Flavor, Dried Egg Product, Carrots, Sweet Potatoes, Peas</p>
+                        
+                        <h4>Guaranteed Analysis:</h4>
+                        <table class="nutrition-table">
+                            <tr>
+                                <td>Crude Protein (min)</td>
+                                <td>26.0%</td>
+                            </tr>
+                            <tr>
+                                <td>Crude Fat (min)</td>
+                                <td>14.0%</td>
+                            </tr>
+                            <tr>
+                                <td>Crude Fiber (max)</td>
+                                <td>4.0%</td>
+                            </tr>
+                            <tr>
+                                <td>Moisture (max)</td>
+                                <td>10.0%</td>
+                            </tr>
+                            <tr>
+                                <td>Omega-6 Fatty Acids (min)</td>
+                                <td>2.5%</td>
+                            </tr>
+                            <tr>
+                                <td>Omega-3 Fatty Acids (min)</td>
+                                <td>0.5%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="feeding">
+                        <h3>Feeding Guidelines</h3>
+                        <p>The following are general feeding recommendations. Adjust as needed to maintain optimal body condition.</p>
+                        
+                        <table class="feeding-table">
+                            <thead>
+                                <tr>
+                                    <th>Dog Weight</th>
+                                    <th>Daily Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10-20 lbs</td>
+                                    <td>1 - 1.75 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>20-30 lbs</td>
+                                    <td>1.75 - 2.5 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>30-40 lbs</td>
+                                    <td>2.5 - 3 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>40-60 lbs</td>
+                                    <td>3 - 4 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>60-80 lbs</td>
+                                    <td>4 - 5 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>80-100 lbs</td>
+                                    <td>5 - 6 cups</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p><strong>Note:</strong> When switching to NutriPet, gradually transition over 7-10 days by mixing increasing amounts of new food with decreasing amounts of current food.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <div class="reviews-header">
+                            <h3>Customer Reviews</h3>
+                            <button class="btn-write-review">Write a Review</button>
+                        </div>
+                        
+                        <div class="reviews-summary">
+                            <div class="rating-summary">
+                                <div class="average-rating">4.8</div>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <div class="total-reviews">Based on 234 reviews</div>
+                            </div>
+                            
+                            <div class="rating-breakdown">
+                                <div class="rating-bar">
+                                    <span>5 ⭐</span>
+                                    <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                                    <span>75%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 ⭐</span>
+                                    <div class="bar"><div class="fill" style="width: 15%"></div></div>
+                                    <span>15%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 ⭐</span>
+                                    <div class="bar"><div class="fill" style="width: 7%"></div></div>
+                                    <span>7%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 ⭐</span>
+                                    <div class="bar"><div class="fill" style="width: 2%"></div></div>
+                                    <span>2%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 ⭐</span>
+                                    <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                    <span>1%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <strong>Sarah M.</strong>
+                                        <span class="verified">✓ Verified Purchase</span>
+                                    </div>
+                                    <div class="review-date">2 weeks ago</div>
+                                </div>
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <div class="review-title">My dog loves it!</div>
+                                <div class="review-text">
+                                    Switched to this food a month ago and my golden retriever's coat has never looked better. He actually gets excited at meal times now!
+                                </div>
+                                <div class="review-helpful">
+                                    <span>Helpful?</span>
+                                    <button>👍 Yes (23)</button>
+                                    <button>👎 No (2)</button>
+                                </div>
+                            </div>
+                            
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <strong>Mike D.</strong>
+                                        <span class="verified">✓ Verified Purchase</span>
+                                    </div>
+                                    <div class="review-date">1 month ago</div>
+                                </div>
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <div class="review-title">Great quality at a fair price</div>
+                                <div class="review-text">
+                                    Been buying this for 6 months now. My two labs are healthy and energetic. The ingredients list is impressive for the price point.
+                                </div>
+                                <div class="review-helpful">
+                                    <span>Helpful?</span>
+                                    <button>👍 Yes (18)</button>
+                                    <button>👎 No (1)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2>You Might Also Like</h2>
+                <div class="related-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=300&h=300&fit=crop" alt="Dog Treats">
+                            <button class="quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Training Treats</h3>
+                            <div class="product-rating">⭐⭐⭐⭐⭐ (89)</div>
+                            <div class="product-price">$12.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=300&h=300&fit=crop" alt="Dog Toys">
+                            <button class="quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Interactive Dog Toys Set</h3>
+                            <div class="product-rating">⭐⭐⭐⭐ (124)</div>
+                            <div class="product-price">$24.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1527698266440-12104e498b76?w=300&h=300&fit=crop" alt="Dog Bowl">
+                            <button class="quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Stainless Steel Dog Bowl</h3>
+                            <div class="product-rating">⭐⭐⭐⭐⭐ (203)</div>
+                            <div class="product-price">$15.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?w=300&h=300&fit=crop" alt="Grooming Kit">
+                            <button class="quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Professional Grooming Kit</h3>
+                            <div class="product-rating">⭐⭐⭐⭐ (156)</div>
+                            <div class="product-price">$34.99</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Get 10% Off Your First Order</h2>
+                    <p>Subscribe to our newsletter for exclusive deals and pet care tips</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Dog Supplies</a></li>
+                        <li><a href="#">Cat Supplies</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="../pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="../how-it-works.html">How It Works</a></li>
+                        <li><a href="../adoption-form.html">Application</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ shop@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pets/catalog.html">Find Pets</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
+                <li><a href="catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="../support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="../auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="../js/main-script.js"></script>
+    <script>
+        // Gallery functionality
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('mainProductImage');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                thumbnails.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const newSrc = this.querySelector('img').src.replace('w=150&h=150', 'w=600&h=600');
+                mainImage.src = newSrc;
+            });
+        });
+
+        // Size options
+        document.querySelectorAll('.size-option').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Quantity selector
+        const qtyInput = document.querySelector('.qty-input');
+        document.querySelector('.qty-btn.minus').addEventListener('click', () => {
+            if (qtyInput.value > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        });
+        document.querySelector('.qty-btn.plus').addEventListener('click', () => {
+            if (qtyInput.value < 10) {
+                qtyInput.value = parseInt(qtyInput.value) + 1;
+            }
+        });
+
+        // Tabs functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabName = this.dataset.tab;
+                
+                // Update buttons
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update content
+                document.querySelectorAll('.tab-pane').forEach(pane => {
+                    pane.classList.remove('active');
+                });
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+        // Add to cart
+        document.querySelector('.btn-add-to-cart').addEventListener('click', function() {
+            // Add to cart logic
+            const notification = document.createElement('div');
+            notification.textContent = 'Added to cart!';
+            notification.style.cssText = 'position: fixed; top: 100px; right: 20px; background: var(--color-green); color: white; padding: 15px 25px; border-radius: 8px; z-index: 3000; animation: slideIn 0.3s ease;';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        });
+
+        // Wishlist
+        document.querySelector('.btn-wishlist').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

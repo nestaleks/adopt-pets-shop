@@ -1,0 +1,318 @@
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="top-bar-item">📍 Visit Us: 123 Pet Street, City</span>
+                    <span class="top-bar-item">📞 1-800-PETLOVE</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="../auth.html" class="top-bar-link">Login</a>
+                    <a href="#" class="top-bar-link">Donate</a>
+                    <a href="#" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="../how-it-works.html">How It Works</a></li>
+                                            <li><a href="../adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="../auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="catalog-hero">
+        <div class="container">
+            <h1>Available Pets for Adoption</h1>
+            <p>Find your perfect companion from our loving pets waiting for their forever homes</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section style="padding: 40px 0;">
+        <div class="container">
+            <div class="catalog-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="clear-filters" id="clearFilters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Search</h4>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search by name or breed...">
+                            <span class="search-icon">🔍</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Species</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterCats" value="cat">
+                                <label for="filterCats">Cats</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterDogs" value="dog">
+                                <label for="filterDogs">Dogs</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Age</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterBaby" value="baby">
+                                <label for="filterBaby">Baby (0-6 months)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterYoung" value="young">
+                                <label for="filterYoung">Young (6 months - 2 years)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterAdult" value="adult">
+                                <label for="filterAdult">Adult (2-7 years)</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterSenior" value="senior">
+                                <label for="filterSenior">Senior (7+ years)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Gender</h4>
+                        <div class="filter-group">
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterMale" value="male">
+                                <label for="filterMale">Male</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="filterFemale" value="female">
+                                <label for="filterFemale">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="apply-filters-btn" id="applyFilters">Apply Filters</button>
+                </aside>
+
+                <!-- Main Catalog Area -->
+                <main class="catalog-main">
+                    <div class="catalog-controls">
+                        <div class="results-info">
+                            Showing <strong id="resultsCount">12</strong> pets
+                        </div>
+                        <div class="sort-controls">
+                            <label>Sort by:</label>
+                            <select id="sortSelect">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="name">Name (A-Z)</option>
+                                <option value="age">Age</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="pets-grid" id="petsGrid">
+                        <!-- Pet cards will be dynamically loaded here -->
+                    </div>
+
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <div class="icon">🐾</div>
+                        <h3>No pets found</h3>
+                        <p>Try adjusting your filters or search criteria</p>
+                        <button class="btn-primary" onclick="clearAllFilters()">Reset Filters</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="#">Browse Pets</a></li>
+                        <li><a href="../how-it-works.html">Adoption Process</a></li>
+                        <li><a href="../adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pet Care</h4>
+                    <ul>
+                        <li><a href="#">Health Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Filter Toggle -->
+    <button class="mobile-filter-toggle" id="mobileFilterToggle">
+        <span>☰</span>
+        <span>Filters</span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Find Pets</a></li>
+                <li><a href="../how-it-works.html">How It Works</a></li>
+                <li><a href="../shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="../auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="../js/main-script.js"></script>

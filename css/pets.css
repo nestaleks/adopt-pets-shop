@@ -1,0 +1,1055 @@
+/* Combined Pets Catalog & Details Page Styles */
+
+/* ============================= */
+/* Shared Pet Styles             */
+/* ============================= */
+
+/* Pet Card Styles - Used on catalog and similar pets sections */
+.pet-card {
+    background: var(--color-content-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pet-card .pet-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.pet-card .pet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.pet-card:hover .pet-image img {
+    transform: scale(1.05);
+}
+
+.pet-card .pet-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--color-orange);
+    color: var(--color-primary-text);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pet-card .pet-badge.new {
+    background: var(--color-blue);
+}
+
+.pet-card .favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-content-bg);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    font-size: 20px;
+}
+
+.pet-card .favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.pet-card .favorite-btn.active {
+    color: var(--color-red);
+}
+
+.pet-card .pet-info {
+    padding: 25px;
+}
+
+.pet-card .pet-info h3 {
+    color: var(--color-secondary-text);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.pet-card .pet-details {
+    color: var(--color-subtext);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.pet-card .pet-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.pet-card .pet-tag {
+    background: var(--color-secondary);
+    color: var(--color-secondary-text);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+}
+
+.pet-card .pet-description {
+    color: var(--color-subtext);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pet-card .meet-btn {
+    display: block;
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pet-card .meet-btn:hover {
+    background: var(--color-highlight);
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* Pets Catalog Page Styles      */
+/* ============================= */
+
+.catalog-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-highlight) 100%);
+    color: var(--color-primary-text);
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.catalog-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.catalog-hero p {
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.filters-sidebar {
+    background: var(--color-content-bg);
+    border-radius: var(--radius-lg);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.filter-header h3 {
+    color: var(--color-secondary-text);
+    font-size: 20px;
+}
+
+.clear-filters {
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.clear-filters:hover {
+    color: var(--color-highlight);
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-section h4 {
+    color: var(--color-secondary-text);
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+.filter-item label {
+    cursor: pointer;
+    color: var(--color-subtext);
+    font-size: 14px;
+}
+
+.filter-item label:hover {
+    color: var(--color-secondary-text);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: var(--color-form-border-width) solid var(--color-form-border-color);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-subtext);
+}
+
+.apply-filters-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.apply-filters-btn:hover {
+    background: var(--color-highlight);
+    transform: translateY(-2px);
+}
+
+.catalog-main {
+    flex: 1;
+}
+
+.catalog-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: var(--color-content-bg);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.results-info {
+    color: var(--color-secondary-text);
+}
+
+.results-info strong {
+    color: var(--color-primary);
+}
+
+.sort-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.sort-controls label {
+    color: var(--color-secondary-text);
+    font-size: 14px;
+}
+
+.sort-controls select {
+    padding: 8px 12px;
+    border: var(--color-form-border-width) solid var(--color-form-border-color);
+    border-radius: var(--radius-sm);
+    background: var(--color-content-bg);
+    cursor: pointer;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-subtext);
+}
+
+.empty-state .icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    color: var(--color-secondary-text);
+    margin-bottom: 10px;
+}
+
+.mobile-filter-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* Pet Details Page Styles       */
+/* ============================= */
+
+.breadcrumb {
+    background: var(--color-secondary);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-form-border-color);
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-subtext);
+    font-size: 14px;
+}
+
+.breadcrumb-nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--color-highlight);
+}
+
+.pet-details-wrapper {
+    padding: 40px 0;
+    background: var(--color-content-bg);
+}
+
+.pet-details-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Gallery Section */
+.pet-gallery {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.main-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-md);
+}
+
+.main-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.image-badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-badge {
+    background: var(--color-orange);
+    color: var(--color-primary-text);
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.image-badge.new {
+    background: var(--color-blue);
+}
+
+.image-badge.urgent {
+    background: var(--color-red);
+}
+
+/* Override for details page favorite button */
+.pet-details-layout .favorite-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-content-bg);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    font-size: 24px;
+}
+
+.pet-details-layout .favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.pet-details-layout .favorite-btn.active {
+    color: var(--color-red);
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.thumbnail {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+    border-color: var(--color-primary);
+}
+
+.thumbnail.active {
+    border-color: var(--color-primary);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Pet Information Section - Details page specific */
+.pet-details-layout .pet-info {
+    padding: 0;
+}
+
+.pet-header {
+    margin-bottom: 30px;
+}
+
+.pet-name {
+    font-size: 42px;
+    color: var(--color-secondary-text);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Details page specific pet tags */
+.pet-details-layout .pet-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pet-details-layout .pet-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pet-details-layout .pet-tag.species {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.pet-details-layout .pet-tag.gender {
+    background: var(--color-green);
+    color: var(--color-primary-text);
+}
+
+.pet-details-layout .pet-tag.age {
+    background: var(--color-orange);
+    color: var(--color-primary-text);
+}
+
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 25px;
+    background: var(--color-secondary);
+    border-radius: var(--radius-lg);
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-form-border-color);
+}
+
+.info-label {
+    color: var(--color-subtext);
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--color-secondary-text);
+    font-weight: 600;
+}
+
+.pet-section {
+    margin-bottom: 35px;
+}
+
+.pet-section h2 {
+    color: var(--color-secondary-text);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pet-section h3 {
+    color: var(--color-secondary-text);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.pet-description {
+    color: var(--color-subtext);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.personality-traits {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.trait-tag {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-highlight));
+    color: var(--color-primary-text);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.compatibility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.compatibility-card {
+    padding: 20px;
+    background: var(--color-content-bg);
+    border: 2px solid;
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-weight: 600;
+}
+
+.compatibility-card.yes {
+    border-color: var(--color-green);
+    background: var(--neutral-light-gray);
+    color: var(--color-green-dark);
+}
+
+.compatibility-card.maybe {
+    border-color: var(--color-orange);
+    background: var(--neutral-light-gray);
+    color: #cc8800;
+}
+
+.compatibility-card.no {
+    border-color: var(--color-red);
+    background: var(--neutral-light-gray);
+    color: var(--color-red);
+}
+
+.health-badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.health-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--color-secondary);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--color-green-dark);
+}
+
+.health-badge .icon {
+    font-size: 20px;
+}
+
+.adoption-box {
+    padding: 30px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-highlight));
+    border-radius: var(--radius-lg);
+    color: var(--color-primary-text);
+    margin-bottom: 30px;
+}
+
+.adoption-fee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fee-label {
+    font-size: 18px;
+}
+
+.fee-amount {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.fee-note {
+    opacity: 0.9;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.btn-adopt {
+    background: var(--color-content-bg);
+    color: var(--color-primary);
+    padding: 15px 30px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-adopt:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-share {
+    background: transparent;
+    color: var(--color-primary-text);
+    border: 2px solid var(--color-primary-text);
+    padding: 15px 30px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-share:hover {
+    background: var(--color-primary-text);
+    color: var(--color-primary);
+}
+
+.shelter-info {
+    padding: 25px;
+    background: var(--color-secondary);
+    border-radius: var(--radius-lg);
+}
+
+.shelter-name {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.shelter-details {
+    color: var(--color-subtext);
+    line-height: 1.8;
+}
+
+.shelter-details p {
+    margin: 8px 0;
+}
+
+/* Recommended Products Section */
+.recommended-products {
+    padding: 60px 0;
+    background: var(--color-content-bg);
+}
+
+.recommended-products .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.recommended-products h2 {
+    color: var(--color-secondary-text);
+    font-size: 36px;
+}
+
+.recommended-products .link-more {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.recommended-products .link-more:hover {
+    color: var(--color-highlight);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--color-content-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--color-form-border-color);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    background: var(--color-secondary);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary-text);
+}
+
+.product-badge.bestseller {
+    background: var(--color-orange);
+}
+
+.product-badge.sale {
+    background: var(--color-red);
+}
+
+.product-badge.new {
+    background: var(--color-blue);
+}
+
+.product-quick-view {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-content-bg);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.product-card:hover .product-quick-view {
+    bottom: 15px;
+    opacity: 1;
+}
+
+.product-quick-view:hover {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: var(--color-secondary-text);
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.product-brand {
+    color: var(--color-subtext);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.product-rating span {
+    color: var(--color-subtext);
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.price-current {
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.price-old {
+    color: var(--color-subtext);
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-add-to-cart:hover {
+    background: var(--color-highlight);
+    transform: translateY(-2px);
+}
+
+/* Similar Pets Section */
+.similar-pets {
+    padding: 60px 0;
+    background: var(--color-secondary);
+}
+
+.similar-pets h2 {
+    text-align: center;
+    color: var(--color-secondary-text);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.similar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ============================= */
+/* Responsive Design             */
+/* ============================= */
+
+@media (max-width: 1024px) {
+    .catalog-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-sidebar {
+        display: none;
+    }
+    
+    .filters-sidebar.active {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 1000;
+        overflow-y: auto;
+        border-radius: 0;
+    }
+    
+    .mobile-filter-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .pet-details-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .pet-gallery {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-hero h1 {
+        font-size: 32px;
+    }
+    
+    .pets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .catalog-controls {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .sort-controls {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .sort-controls select {
+        width: 100%;
+    }
+    
+    .pet-name {
+        font-size: 32px;
+    }
+    
+    .main-image img {
+        height: 350px;
+    }
+    
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .compatibility-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .similar-grid {
+        grid-template-columns: 1fr;
+    }
+}

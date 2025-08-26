@@ -1,0 +1,216 @@
+/* How It Works Page Styles */
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-highlight) 100%);
+    color: var(--color-primary-text);
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.page-hero p {
+    font-size: 20px;
+    opacity: 0.95;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 0;
+    background: var(--color-secondary);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.process-step {
+    background: var(--primary-mid-green);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--primary-dark-green);
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #d1e7dd 0%, #bddccf 100%);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-dark-green);
+    color: var(--color-primary-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(16, 94, 74, 0.3);
+}
+
+.step-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    display: block;
+    color: var(--primary-dark-green);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.process-step h3 {
+    color: var(--primary-dark-green);
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.process-step p {
+    color: var(--color-secondary-text);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    text-align: center;
+    background: var(--color-content-bg);
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: var(--color-secondary-text);
+    margin-bottom: 30px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: var(--color-secondary);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--color-content-bg);
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--color-secondary-text);
+    transition: all var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--color-secondary);
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 24px;
+    color: var(--color-primary);
+    transition: transform var(--transition);
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 20px;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: var(--color-subtext);
+    line-height: 1.6;
+}
+
+/* FAQ heading inline style replacement */
+.faq-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 36px;
+    }
+    
+    .page-hero p {
+        font-size: 16px;
+    }
+    
+    .cta-section h2 {
+        font-size: 28px;
+    }
+    
+    .faq-heading {
+        font-size: 28px;
+    }
+}
+
+/* Process steps - 2 columns until 480px */
+@media (max-width: 480px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
