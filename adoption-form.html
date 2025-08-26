@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your pet adoption application at Adopt Pets.">
+    <title>Adoption Application Form | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="auth.html" class="top-bar-link">Login</a>
+                    <a href="donate.html" class="top-bar-link">Donate</a>
+                    <a href="contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="how-it-works.html">How It Works</a></li>
+                                            <li><a href="adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="adoption-form.html" class="nav-link active">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="auth.html" class="btn-primary">Sign In</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Form Hero -->
+    <section class="form-hero">
+        <div class="container">
+            <h1>Adoption Application</h1>
+            <p>Take the first step towards welcoming your new family member</p>
+        </div>
+    </section>
+
+    <!-- Form Content -->
+    <section class="form-wrapper">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-line" id="progressLine"></div>
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <span class="step-label">Personal Info</span>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <span class="step-label">Living Situation</span>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <span class="step-label">Pet Experience</span>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-circle">4</div>
+                        <span class="step-label">Review & Submit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Container -->
+            <div class="form-container">
+                <form id="adoptionForm">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <h2>Personal Information</h2>
+                            <p>Please provide your contact details so we can reach you</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City <span class="required">*</span></label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State/Province <span class="required">*</span></label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal Code <span class="required">*</span></label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Your Age <span class="required">*</span></label>
+                            <select id="age" name="age" required>
+                                <option value="">Select your age range</option>
+                                <option value="18-25">18-25</option>
+                                <option value="26-35">26-35</option>
+                                <option value="36-45">36-45</option>
+                                <option value="46-55">46-55</option>
+                                <option value="56-65">56-65</option>
+                                <option value="65+">65+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Living Situation -->
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <h2>Living Situation</h2>
+                            <p>Help us understand your home environment</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Type of Home <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="house" name="homeType" value="house" required>
+                                    <label for="house">House</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="apartment" name="homeType" value="apartment" required>
+                                    <label for="apartment">Apartment</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="condo" name="homeType" value="condo" required>
+                                    <label for="condo">Condo/Townhouse</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="farm" name="homeType" value="farm" required>
+                                    <label for="farm">Farm/Ranch</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ownership">Do you own or rent? <span class="required">*</span></label>
+                                <select id="ownership" name="ownership" required>
+                                    <option value="">Select...</option>
+                                    <option value="own">Own</option>
+                                    <option value="rent">Rent</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yard">Do you have a yard?</label>
+                                <select id="yard" name="yard">
+                                    <option value="">Select...</option>
+                                    <option value="yes-fenced">Yes, fenced</option>
+                                    <option value="yes-unfenced">Yes, unfenced</option>
+                                    <option value="no">No yard</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="household">Number of adults in household <span class="required">*</span></label>
+                                <input type="number" id="household" name="household" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="children">Number of children</label>
+                                <input type="number" id="children" name="children" min="0" value="0">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="childrenAges">If you have children, what are their ages?</label>
+                            <input type="text" id="childrenAges" name="childrenAges" placeholder="e.g., 5, 8, and 12">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="allergies">Does anyone in your household have pet allergies?</label>
+                            <select id="allergies" name="allergies">
+                                <option value="">Select...</option>
+                                <option value="no">No</option>
+                                <option value="yes-mild">Yes, mild</option>
+                                <option value="yes-severe">Yes, severe</option>
+                                <option value="unsure">Unsure</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Pet Experience -->
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <h2>Pet Experience</h2>
+                            <p>Tell us about your experience with pets</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currentPets">Do you currently have pets?</label>
+                            <select id="currentPets" name="currentPets">
+                                <option value="">Select...</option>
+                                <option value="no">No</option>
+                                <option value="dogs">Dogs</option>
+                                <option value="cats">Cats</option>
+                                <option value="both">Both dogs and cats</option>
+                                <option value="other">Other pets</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="petDetails">If you have pets, please describe them</label>
+                            <textarea id="petDetails" name="petDetails" placeholder="Type, breed, age, temperament..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="previousPets">Have you had pets before?</label>
+                            <select id="previousPets" name="previousPets">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vetInfo">Veterinarian Information (if applicable)</label>
+                            <textarea id="vetInfo" name="vetInfo" placeholder="Clinic name, phone number, veterinarian's name..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whyAdopt">Why do you want to adopt a pet? <span class="required">*</span></label>
+                            <textarea id="whyAdopt" name="whyAdopt" required placeholder="Tell us your reasons for wanting to adopt..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>What type of pet are you interested in?</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="intDog" name="petInterest" value="dog">
+                                    <label for="intDog">Dog</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="intCat" name="petInterest" value="cat">
+                                    <label for="intCat">Cat</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="intRabbit" name="petInterest" value="rabbit">
+                                    <label for="intRabbit">Rabbit</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="intBird" name="petInterest" value="bird">
+                                    <label for="intBird">Bird</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="petPreferences">Any specific preferences or requirements?</label>
+                            <textarea id="petPreferences" name="petPreferences" placeholder="Age, size, temperament, special needs..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review & Submit -->
+                    <div class="form-step" data-step="4">
+                        <div class="step-header">
+                            <h2>Review Your Application</h2>
+                            <p>Please review your information before submitting</p>
+                        </div>
+                        
+                        <div class="review-section" id="reviewContent">
+                            <!-- Review content will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="agreement-section">
+                            <div class="agreement-item">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <label for="agreeTerms">
+                                    I certify that all information provided in this application is true and accurate to the best of my knowledge.
+                                </label>
+                            </div>
+                            <div class="agreement-item">
+                                <input type="checkbox" id="agreeVisit" required>
+                                <label for="agreeVisit">
+                                    I understand that a home visit may be required as part of the adoption process.
+                                </label>
+                            </div>
+                            <div class="agreement-item">
+                                <input type="checkbox" id="agreeFollowUp" required>
+                                <label for="agreeFollowUp">
+                                    I agree to provide updates and allow follow-up contact after adoption.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">🎉</div>
+                        <h2>Application Submitted Successfully!</h2>
+                        <p>Thank you for your adoption application. We'll review it and contact you within 24-48 hours.</p>
+                        <a href="index.html" class="btn-primary">Return to Home</a>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation" id="formNav">
+                        <button type="button" class="btn-nav btn-prev" id="prevBtn">Previous</button>
+                        <button type="button" class="btn-nav btn-next" id="nextBtn">Next</button>
+                        <button type="submit" class="btn-nav btn-submit hidden" id="submitBtn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="how-it-works.html">Adoption Process</a></li>
+                        <li><a href="adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pet Care</h4>
+                    <ul>
+                        <li><a href="#">Health Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="auth.html" class="btn-primary btn-block">Sign In</a>
+        </div>
+    </div>
+
+    <script src="js/main-script.js"></script>
+    <script>
+        // Multi-step form functionality
+        let currentStep = 1;
+        const totalSteps = 4;
+        
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const form = document.getElementById('adoptionForm');
+        const progressLine = document.getElementById('progressLine');
+        const formNav = document.getElementById('formNav');
+        const successMessage = document.getElementById('successMessage');
+        
+        function updateProgressBar() {
+            const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            progressLine.style.width = progress + '%';
+        }
+        
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(s => {
+                s.classList.remove('active');
+            });
+            
+            // Show current step
+            const currentFormStep = document.querySelector(`.form-step[data-step="${step}"]`);
+            if (currentFormStep) {
+                currentFormStep.classList.add('active');
+            }
+            
+            // Update progress indicators
+            document.querySelectorAll('.progress-step').forEach((s, index) => {
+                s.classList.remove('active', 'completed');
+                if (index < step - 1) {
+                    s.classList.add('completed');
+                } else if (index === step - 1) {
+                    s.classList.add('active');
+                }
+            });
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Update buttons
+            prevBtn.style.display = step === 1 ? 'none' : 'block';
+            
+            if (step === totalSteps) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+                populateReview();
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+            
+            // Scroll to top of form
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function validateStep(step) {
+            const currentFormStep = document.querySelector(`.form-step[data-step="${step}"]`);
+            const requiredFields = currentFormStep.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'var(--color-red)';
+                } else {
+                    field.style.borderColor = 'var(--color-form-border-color)';
+                }
+            });
+            
+            return isValid;
+        }
+        
+        function populateReview() {
+            const reviewContent = document.getElementById('reviewContent');
+            const formData = new FormData(form);
+            
+            let html = '';
+            
+            // Personal Information
+            html += '<div class="review-category">';
+            html += '<h3>Personal Information</h3>';
+            html += `<div class="review-item">
+                <span class="review-label">Name:</span>
+                <span class="review-value">${formData.get('firstName') || ''} ${formData.get('lastName') || ''}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Email:</span>
+                <span class="review-value">${formData.get('email') || ''}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Phone:</span>
+                <span class="review-value">${formData.get('phone') || ''}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Address:</span>
+                <span class="review-value">${formData.get('city') || ''}, ${formData.get('state') || ''} ${formData.get('zip') || ''}</span>
+            </div>`;
+            html += '</div>';
+            
+            // Living Situation
+            html += '<div class="review-category">';
+            html += '<h3>Living Situation</h3>';
+            html += `<div class="review-item">
+                <span class="review-label">Home Type:</span>
+                <span class="review-value">${formData.get('homeType') || 'Not specified'}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Ownership:</span>
+                <span class="review-value">${formData.get('ownership') || 'Not specified'}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Yard:</span>
+                <span class="review-value">${formData.get('yard') || 'Not specified'}</span>
+            </div>`;
+            html += '</div>';
+            
+            // Pet Experience
+            html += '<div class="review-category">';
+            html += '<h3>Pet Experience</h3>';
+            html += `<div class="review-item">
+                <span class="review-label">Current Pets:</span>
+                <span class="review-value">${formData.get('currentPets') || 'None'}</span>
+            </div>`;
+            html += `<div class="review-item">
+                <span class="review-label">Why Adopt:</span>
+                <span class="review-value">${formData.get('whyAdopt') || ''}</span>
+            </div>`;
+            html += '</div>';
+            
+            reviewContent.innerHTML = html;
+        }
+        
+        // Event Listeners
+        nextBtn.addEventListener('click', function() {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            } else {
+                alert('Please fill in all required fields');
+            }
+        });
+        
+        prevBtn.addEventListener('click', function() {
+            currentStep--;
+            showStep(currentStep);
+        });
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Check if agreements are checked
+            const agreements = document.querySelectorAll('.agreement-item input[type="checkbox"]');
+            let allChecked = true;
+            
+            agreements.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+            
+            if (!allChecked) {
+                alert('Please agree to all terms and conditions');
+                return;
+            }
+            
+            // Hide form and show success message
+            document.querySelectorAll('.form-step').forEach(s => {
+                s.classList.remove('active');
+            });
+            formNav.style.display = 'none';
+            successMessage.classList.add('active');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        
+        // Initialize
+        showStep(currentStep);
+    </script>
+</body>
+</html>

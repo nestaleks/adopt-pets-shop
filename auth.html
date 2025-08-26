@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or create an account at Adopt Pets to start your pet adoption journey.">
+    <title>Login / Register - Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-right">
+                        <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                        <a href="auth.html" class="top-bar-link">Login</a>
+                        <a href="donate.html" class="top-bar-link">Donate</a>
+                        <a href="contact.html" class="top-bar-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon">🐾</span>
+                            <span class="logo-text">
+                                <strong>ADOPT</strong>
+                                <span>PETS</span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pets/catalog.html" class="nav-link">Find Pets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="shop/catalog.html" class="nav-link">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Support Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <button class="btn-search" aria-label="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Auth Container -->
+        <div class="auth-container">
+            <div class="auth-box" id="authBox">
+                <!-- Sign In Form -->
+                <div class="form-container sign-in-container">
+                    <div class="form-wrapper">
+                        <form id="loginForm" class="auth-form">
+                            <h1>Sign In</h1>
+                            
+                            <div class="success-message" id="loginSuccess">
+                                Successfully logged in! Redirecting...
+                            </div>
+                            
+                            <div class="social-container">
+                                <button type="button" class="social-btn" aria-label="Sign in with Google">G</button>
+                                <button type="button" class="social-btn" aria-label="Sign in with Facebook">f</button>
+                                <button type="button" class="social-btn" aria-label="Sign in with Twitter">X</button>
+                            </div>
+                            
+                            <div class="divider-text">or use your account</div>
+                            
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="rememberMe">
+                                <label for="rememberMe">Remember me</label>
+                            </div>
+
+                            <a href="#" class="forgot-link">Forgot your password?</a>
+                            
+                            <button type="submit" class="auth-btn">Sign In</button>
+                            
+                            <div class="toggle-forms">
+                                <p>Don't have an account? <a href="#" onclick="toggleForm(); return false;">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="form-container sign-up-container">
+                    <div class="form-wrapper">
+                        <form id="registerForm" class="auth-form">
+                            <h1>Create Account</h1>
+                            
+                            <div class="success-message" id="registerSuccess">
+                                Account created successfully! Redirecting...
+                            </div>
+                            
+                            <div class="social-container">
+                                <button type="button" class="social-btn" aria-label="Sign up with Google">G</button>
+                                <button type="button" class="social-btn" aria-label="Sign up with Facebook">f</button>
+                                <button type="button" class="social-btn" aria-label="Sign up with Twitter">X</button>
+                            </div>
+                            
+                            <div class="divider-text">or use your email</div>
+                            
+                            <div class="form-group">
+                                <label for="registerName">Full Name</label>
+                                <input type="text" id="registerName" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registerEmail">Email Address</label>
+                                <input type="email" id="registerEmail" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registerPassword">Password</label>
+                                <input type="password" id="registerPassword" placeholder="Create a password (min. 8 characters)" minlength="8" required>
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <label for="agreeTerms">
+                                    I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">
+                                    Send me news and special offers
+                                </label>
+                            </div>
+
+                            <button type="submit" class="auth-btn">Sign Up</button>
+                            
+                            <div class="toggle-forms">
+                                <p>Already have an account? <a href="#" onclick="toggleForm(); return false;">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Overlay Container -->
+                <div class="overlay-container" id="overlayCon">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <p>Already have an account?</p>
+                            <button class="btn-ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <p>Want create an account?</p>
+                            <button class="btn-ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="js/main-script.js"></script>
+    <script>
+        // Toggle between sign in and sign up forms
+        function toggleForm() {
+            const authBox = document.getElementById('authBox');
+            authBox.classList.toggle('right-panel-active');
+        }
+
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('authBox');
+
+        // signUp button shows Sign Up form (adds right-panel-active)
+        if (signUpButton) {
+            signUpButton.addEventListener('click', () => {
+                container.classList.add("right-panel-active");
+            });
+        }
+
+        // signIn button shows Sign In form (removes right-panel-active)
+        if (signInButton) {
+            signInButton.addEventListener('click', () => {
+                container.classList.remove("right-panel-active");
+            });
+        }
+
+        // Check if we're on mobile and adjust display
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.toggle-forms').forEach(el => {
+                el.style.display = 'block';
+            });
+        }
+
+        // Form submission handlers
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('.auth-btn');
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const successMsg = document.getElementById('loginSuccess');
+            
+            // Show loading state
+            button.classList.add('loading');
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Store user data in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                
+                // Show success message
+                successMsg.classList.add('show');
+                button.classList.remove('loading');
+                button.disabled = false;
+                
+                // Redirect after delay
+                setTimeout(() => {
+                    window.location.href = 'profile.html';
+                }, 1500);
+            }, 1000);
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('.auth-btn');
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const successMsg = document.getElementById('registerSuccess');
+            
+            // Show loading state
+            button.classList.add('loading');
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Store user data in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userName', name);
+                
+                // Show success message
+                successMsg.classList.add('show');
+                button.classList.remove('loading');
+                button.disabled = false;
+                
+                // Redirect after delay
+                setTimeout(() => {
+                    window.location.href = 'profile.html';
+                }, 1500);
+            }, 1000);
+        });
+
+        // Social login handlers (placeholder)
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const platform = this.getAttribute('aria-label').split(' ').pop();
+                alert(`${platform} login integration coming soon!`);
+            });
+        });
+
+        // Forgot password handler
+        document.querySelectorAll('.forgot-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Password reset functionality coming soon! We\'ll send you an email with instructions.');
+            });
+        });
+    </script>
+</body>
+</html>

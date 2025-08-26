@@ -1,0 +1,52 @@
+/* 
+ * Main App CSS File
+ * This file imports all CSS modules in the correct order
+ * All HTML files should only reference this single CSS file
+ * 
+ * IMPORTANT: Order matters! More specific styles should come after general styles
+ * to ensure proper CSS cascade and specificity
+ */
+
+/* 1. Design System Variables - MUST BE FIRST */
+@import url('css/variables.css');
+
+/* 2. CSS Reset - Normalize browser defaults */
+@import url('css/reset.css');
+
+/* 3. Base Styles & Utilities - Common styles used across site */
+@import url('css/base.css');
+
+/* 4. Layout Utilities - Grid and flexbox helpers */
+@import url('css/layout.css');
+
+/* 5. Reusable Components - Generic card, button, form components */
+@import url('css/components.css');
+
+/* 6. Main Site Styles - Header, Navigation, Footer (BEFORE page-specific) */
+@import url('css/main-style.css');
+
+/* 7. Page-Specific Styles - Home and generic page styles */
+@import url('css/pages/home.css');
+
+/* 8. Pets Section - Combined catalog and details styles (AFTER main-style) */
+@import url('css/pets.css');
+@import url('css/adoption-form.css');
+
+/* 9. Shop Section - Combined shop styles */
+@import url('css/shop.css');
+@import url('css/checkout.css');
+
+/* 10. News Section - News and article styles (AFTER main-style to override .news-card) */
+@import url('css/news.css');
+
+/* 11. Info Pages - Contact, donate, support pages */
+@import url('css/how-it-works.css');
+@import url('css/contact.css');
+@import url('css/donate.css');
+@import url('css/support-us.css');
+
+/* 12. Authentication Pages */
+@import url('css/auth.css');
+
+/* 13. User Profile - Most specific user styles */
+@import url('css/profile.css');

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate to Adopt Pets - Help us save more animals with your generous contribution.">
+    <title>Donate - Make a Difference | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="auth.html" class="top-bar-link">Login</a>
+                    <a href="donate.html" class="top-bar-link active">Donate</a>
+                    <a href="contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="pets/catalog.html" class="nav-link">Find Pets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="donate.html" class="btn-primary">Donate Now</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Donate Hero -->
+    <section class="donate-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Every Dollar Saves Lives</h1>
+                <p>Your donation helps us rescue, rehabilitate, and rehome animals in need</p>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <span class="number">$25</span>
+                        <span class="label">Feeds 5 pets for a week</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">$50</span>
+                        <span class="label">Provides vaccinations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">$100</span>
+                        <span class="label">Emergency medical care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-layout">
+                <!-- Donation Form -->
+                <div class="donation-form-container">
+                    <h2>Make Your Donation</h2>
+                    
+                    <!-- Donation Type -->
+                    <div class="donation-type">
+                        <button class="type-btn active" data-type="once">One-Time</button>
+                        <button class="type-btn" data-type="monthly">Monthly</button>
+                    </div>
+                    
+                    <!-- Amount Selection -->
+                    <div class="amount-section">
+                        <h3>Select Amount</h3>
+                        <div class="amount-grid">
+                            <button class="amount-btn" data-amount="25">$25</button>
+                            <button class="amount-btn active" data-amount="50">$50</button>
+                            <button class="amount-btn" data-amount="100">$100</button>
+                            <button class="amount-btn" data-amount="250">$250</button>
+                            <button class="amount-btn" data-amount="500">$500</button>
+                            <button class="amount-btn" data-amount="custom">Other</button>
+                        </div>
+                        <div class="custom-amount" style="display: none;">
+                            <label for="customAmount">Enter Amount</label>
+                            <input type="number" id="customAmount" min="5" placeholder="$ Enter amount">
+                        </div>
+                    </div>
+                    
+                    <!-- Designation -->
+                    <div class="designation-section">
+                        <h3>Designate Your Gift (Optional)</h3>
+                        <select id="designation">
+                            <option value="general">Where Most Needed</option>
+                            <option value="medical">Medical Fund</option>
+                            <option value="food">Food & Supplies</option>
+                            <option value="shelter">Shelter Improvements</option>
+                            <option value="rescue">Rescue Operations</option>
+                            <option value="spay">Spay/Neuter Program</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Donor Information -->
+                    <div class="donor-section">
+                        <h3>Your Information</h3>
+                        <form class="donation-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donorFirstName">First Name *</label>
+                                    <input type="text" id="donorFirstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorLastName">Last Name *</label>
+                                    <input type="text" id="donorLastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donorEmail">Email Address *</label>
+                                <input type="email" id="donorEmail" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donorPhone">Phone Number</label>
+                                <input type="tel" id="donorPhone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donorAddress">Street Address</label>
+                                <input type="text" id="donorAddress">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donorCity">City</label>
+                                    <input type="text" id="donorCity">
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorState">State</label>
+                                    <select id="donorState">
+                                        <option value="">Select State</option>
+                                        <option value="CA">California</option>
+                                        <option value="NY">New York</option>
+                                        <option value="TX">Texas</option>
+                                        <!-- Add more states -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorZip">ZIP Code</label>
+                                    <input type="text" id="donorZip">
+                                </div>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="anonymous">
+                                <label for="anonymous">Make this donation anonymous</label>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="tribute">
+                                <label for="tribute">This is a tribute gift</label>
+                            </div>
+                            
+                            <div class="tribute-info" style="display: none;">
+                                <div class="form-group">
+                                    <label>Tribute Type</label>
+                                    <div class="radio-group">
+                                        <label>
+                                            <input type="radio" name="tributeType" value="honor"> In Honor Of
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="tributeType" value="memory"> In Memory Of
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tributeName">Name</label>
+                                    <input type="text" id="tributeName">
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Method -->
+                            <div class="payment-section">
+                                <h3>Payment Method</h3>
+                                <div class="payment-methods">
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="card" checked>
+                                        <span>Credit/Debit Card</span>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="paypal">
+                                        <span>PayPal</span>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="bank">
+                                        <span>Bank Transfer</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="card-info" id="cardInfo">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number *</label>
+                                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="cardExpiry">Expiry Date *</label>
+                                            <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardCVV">CVV *</label>
+                                            <input type="text" id="cardCVV" placeholder="123" maxlength="4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="donation-summary">
+                                <div class="summary-line">
+                                    <span>Donation Amount:</span>
+                                    <span id="summaryAmount">$50</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Frequency:</span>
+                                    <span id="summaryFrequency">One-Time</span>
+                                </div>
+                                <div class="summary-line total">
+                                    <strong>Total:</strong>
+                                    <strong id="summaryTotal">$50</strong>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-donate">Complete Donation</button>
+                            
+                            <p class="security-note">
+                                🔒 Your donation is secure and encrypted. Adopt Pets is a 501(c)(3) non-profit organization. 
+                                Your donation is tax-deductible to the extent allowed by law. Tax ID: 12-3456789
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="donation-sidebar">
+                    <!-- Impact Card -->
+                    <div class="impact-card">
+                        <h3>Your Impact</h3>
+                        <div class="impact-list">
+                            <div class="impact-item">
+                                <span class="icon">🏠</span>
+                                <div>
+                                    <strong>3,500+</strong>
+                                    <p>Animals found homes last year</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="icon">🏥</span>
+                                <div>
+                                    <strong>5,000+</strong>
+                                    <p>Medical treatments provided</p>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="icon">🍖</span>
+                                <div>
+                                    <strong>50,000+</strong>
+                                    <p>Meals served to animals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Other Ways to Give -->
+                    <div class="other-ways-card">
+                        <h3>Other Ways to Give</h3>
+                        <ul>
+                            <li><a href="#">💼 Corporate Partnerships</a></li>
+                            <li><a href="#">📋 Planned Giving</a></li>
+                            <li><a href="#">🎁 Gift in Someone's Name</a></li>
+                            <li><a href="#">📦 Amazon Smile</a></li>
+                            <li><a href="#">🚗 Vehicle Donation</a></li>
+                            <li><a href="#">📈 Stock Donation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Card -->
+                    <div class="contact-card">
+                        <h3>Questions?</h3>
+                        <p>Contact our donor relations team</p>
+                        <p class="contact-info">
+                            📞 1-800-PETLOVE ext. 2<br>
+                            ✉️ donate@adoptpets.com
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2>Your Donations at Work</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop" alt="Rescued dog">
+                    <div class="story-content">
+                        <h3>Rocky's Recovery</h3>
+                        <p>Thanks to donor support, Rocky received life-saving surgery and found his forever home.</p>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop" alt="Rescued cat">
+                    <div class="story-content">
+                        <h3>Luna's Journey</h3>
+                        <p>Your donations helped Luna recover from malnutrition and find a loving family.</p>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="Happy pets">
+                    <div class="story-content">
+                        <h3>Building Hope</h3>
+                        <p>We expanded our shelter facilities to rescue 40% more animals this year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on how your donations are making a difference</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="how-it-works.html">Adoption Process</a></li>
+                        <li><a href="adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="support-us.html#volunteer">Volunteer</a></li>
+                        <li><a href="support-us.html#foster">Foster</a></li>
+                        <li><a href="support-us.html#corporate">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">Financial Info</a></li>
+                        <li><a href="#">Impact Report</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ donate@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved. | 501(c)(3) Non-Profit | Tax ID: 12-3456789</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Donor Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="adoption-form.html">Adopt</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="donate.html" class="btn-primary btn-block">Donate Now</a>
+        </div>
+    </div>
+
+    <script src="js/main-script.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+</html>

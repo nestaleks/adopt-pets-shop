@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adopt Pets - Find your perfect companion. Browse adoptable pets, learn about pet care, and support animal welfare.">
+    <title>Adopt Pets - Your Trusted Pet Adoption Center</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="auth.html" class="top-bar-link">Login</a>
+                    <a href="donate.html" class="top-bar-link">Donate</a>
+                    <a href="contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="pets/catalog.html" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                            <li><a href="#">🐹 Small Animals</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Special Categories</h3>
+                                        <ul>
+                                            <li><a href="#">Puppies & Kittens</a></li>
+                                            <li><a href="#">Senior Pets</a></li>
+                                            <li><a href="#">Special Needs</a></li>
+                                            <li><a href="#">Bonded Pairs</a></li>
+                                            <li><a href="#">Urgent Adoptions</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column featured">
+                                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=300&h=200&fit=crop" alt="Featured pets">
+                                        <h4>Featured: Senior Pet Month</h4>
+                                        <p>Give a senior pet a loving home</p>
+                                        <a href="#" class="btn-small">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Adoption</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Getting Started</h3>
+                                        <ul>
+                                            <li><a href="#">Adoption Process</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                            <li><a href="#">Application Form</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Resources</h3>
+                                        <ul>
+                                            <li><a href="#">Preparing Your Home</a></li>
+                                            <li><a href="#">First Day Tips</a></li>
+                                            <li><a href="#">Training Guides</a></li>
+                                            <li><a href="#">FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Pet Care</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Health & Wellness</h3>
+                                        <ul>
+                                            <li><a href="#">Nutrition Guide</a></li>
+                                            <li><a href="#">Exercise Tips</a></li>
+                                            <li><a href="#">Veterinary Care</a></li>
+                                            <li><a href="#">Vaccinations</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Behavior & Training</h3>
+                                        <ul>
+                                            <li><a href="#">Basic Training</a></li>
+                                            <li><a href="#">Behavior Issues</a></li>
+                                            <li><a href="#">Socialization</a></li>
+                                            <li><a href="#">Professional Help</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="shop/catalog.html" class="nav-link">Shop</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Categories</h3>
+                                        <ul>
+                                            <li><a href="shop/catalog.html">Food & Treats</a></li>
+                                            <li><a href="shop/catalog.html">Toys & Play</a></li>
+                                            <li><a href="shop/catalog.html">Beds & Furniture</a></li>
+                                            <li><a href="shop/catalog.html">Grooming</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Special Offers</h3>
+                                        <ul>
+                                            <li><a href="shop/catalog.html">New Arrivals</a></li>
+                                            <li><a href="shop/catalog.html">Best Sellers</a></li>
+                                            <li><a href="shop/catalog.html">Clearance</a></li>
+                                            <li><a href="shop/catalog.html">Bundle Deals</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="profile.html" class="btn-primary">My Account</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1920&h=600&fit=crop" alt="Happy pets">
+                <div class="carousel-content">
+                    <h1>Find Your Perfect Companion</h1>
+                    <p>Over 500 pets waiting for their forever homes</p>
+                    <div class="carousel-buttons">
+                        <a href="#" class="btn-hero-primary">Browse Pets</a>
+                        <a href="#" class="btn-hero-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=600&fit=crop" alt="Adoption event">
+                <div class="carousel-content">
+                    <h1>Adoption Event This Weekend</h1>
+                    <p>Meet adoptable pets and get 50% off adoption fees</p>
+                    <div class="carousel-buttons">
+                        <a href="#" class="btn-hero-primary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&h=600&fit=crop" alt="Volunteer">
+                <div class="carousel-content">
+                    <h1>Make a Difference</h1>
+                    <p>Join our volunteer team and help pets in need</p>
+                    <div class="carousel-buttons">
+                        <a href="#" class="btn-hero-primary">Volunteer</a>
+                        <a href="#" class="btn-hero-secondary">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="carousel-prev">‹</button>
+            <button class="carousel-next">›</button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Quick Actions Bar -->
+    <section class="quick-actions">
+        <div class="container">
+            <div class="actions-grid">
+                <a href="#" class="action-card">
+                    <div class="action-icon">🐾</div>
+                    <h3>Find a Pet</h3>
+                    <p>Browse available pets</p>
+                </a>
+                <a href="#" class="action-card">
+                    <div class="action-icon">📝</div>
+                    <h3>Apply to Adopt</h3>
+                    <p>Start your application</p>
+                </a>
+                <a href="#" class="action-card">
+                    <div class="action-icon">🏥</div>
+                    <h3>Pet Care</h3>
+                    <p>Health & wellness tips</p>
+                </a>
+                <a href="#" class="action-card">
+                    <div class="action-icon">💝</div>
+                    <h3>Donate</h3>
+                    <p>Support our mission</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Pets Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pets Looking for Homes</h2>
+                <a href="pets/catalog.html" class="link-more">View All Pets →</a>
+            </div>
+            <div class="pets-grid">
+                <article class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=300&fit=crop" alt="Max">
+                        <span class="pet-badge urgent">Urgent</span>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Max</h3>
+                        <p class="pet-breed">Golden Retriever • 2 years</p>
+                        <p class="pet-description">Friendly and energetic dog looking for an active family</p>
+                        <div class="pet-tags">
+                            <span class="tag">Good with kids</span>
+                            <span class="tag">Trained</span>
+                        </div>
+                        <a href="pets/details.html?pet=max" class="btn-card">Meet Max</a>
+                    </div>
+                </article>
+                
+                <article class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=300&fit=crop" alt="Luna">
+                        <span class="pet-badge new">New</span>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Luna</h3>
+                        <p class="pet-breed">Siamese Cat • 3 years</p>
+                        <p class="pet-description">Gentle and affectionate cat who loves to cuddle</p>
+                        <div class="pet-tags">
+                            <span class="tag">Indoor only</span>
+                            <span class="tag">Quiet</span>
+                        </div>
+                        <a href="pets/details.html?pet=luna" class="btn-card">Meet Luna</a>
+                    </div>
+                </article>
+                
+                <article class="pet-card">
+                    <div class="pet-image">
+                        <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=400&h=300&fit=crop" alt="Charlie">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Charlie</h3>
+                        <p class="pet-breed">Labrador Mix • 6 months</p>
+                        <p class="pet-description">Playful puppy ready to bring joy to your home</p>
+                        <div class="pet-tags">
+                            <span class="tag">Puppy</span>
+                            <span class="tag">Energetic</span>
+                        </div>
+                        <a href="pets/details.html?pet=charlie" class="btn-card">Meet Charlie</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest News & Events</h2>
+                <a href="news.html" class="link-more">View All News →</a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Adoption event">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Event</span>
+                        <h3>Spring Adoption Fair - March 15-16</h3>
+                        <p>Join us for our biggest adoption event of the year! Meet dozens of adoptable pets, enjoy family activities, and get special adoption discounts.</p>
+                        <div class="news-meta">
+                            <span class="date">March 1, 2025</span>
+                            <a href="news-article.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1415369629372-26f2fe60c467?w=400&h=250&fit=crop" alt="Success story">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Success Story</span>
+                        <h3>Happy Tails: Luna Finds Her Forever Home</h3>
+                        <p>After 6 months in our shelter, Luna has found the perfect family...</p>
+                        <div class="news-meta">
+                            <span class="date">February 28, 2025</span>
+                            <a href="news-article.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=250&fit=crop" alt="Volunteer program">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Volunteer</span>
+                        <h3>New Volunteer Training Program Launches</h3>
+                        <p>We're excited to announce our comprehensive new volunteer training...</p>
+                        <div class="news-meta">
+                            <span class="date">February 25, 2025</span>
+                            <a href="news-article.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="info-cards-section">
+        <div class="container">
+            <div class="info-cards-grid">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <h3>Visit Our Center</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <p><strong>Opening Hours:</strong></p>
+                        <p>Mon-Fri: 10am - 6pm</p>
+                        <p>Sat-Sun: 9am - 7pm</p>
+                        <p class="mt-2"><strong>Address:</strong></p>
+                        <p>123 Pet Street, City, State 12345</p>
+                        <a href="#" class="btn-outline">Get Directions</a>
+                    </div>
+                </div>
+                
+                <div class="info-card highlight">
+                    <div class="info-card-header">
+                        <h3>Adoption Special</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <p class="text-large"><strong>50% OFF</strong></p>
+                        <p>Senior Pet Adoptions</p>
+                        <p class="text-small">This month only</p>
+                        <a href="#" class="btn-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <h3>Get Our App</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <p>Browse pets, track applications, and get updates on your phone</p>
+                        <div class="app-buttons">
+                            <img src="https://via.placeholder.com/135x40/000/fff?text=App+Store" alt="App Store">
+                            <img src="https://via.placeholder.com/135x40/000/fff?text=Google+Play" alt="Google Play">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="#">Browse Pets</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="news.html">Pet Care Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="footer-badges">
+                    <img src="https://via.placeholder.com/100x40/fff/333?text=Certified" alt="Certification">
+                    <img src="https://via.placeholder.com/100x40/fff/333?text=Accredited" alt="Accreditation">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="adoption-form.html">Adopt</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="profile.html" class="btn-primary btn-block">My Account</a>
+        </div>
+    </div>
+
+    <script src="js/main-script.js"></script>
+</body>
+</html>

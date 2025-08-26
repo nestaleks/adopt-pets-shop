@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and updates from Adopt Pets - adoption events, success stories, and pet care tips.">
+    <title>News & Events | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="auth.html" class="top-bar-link">Login</a>
+                    <a href="donate.html" class="top-bar-link">Donate</a>
+                    <a href="contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="pets/catalog.html" class="nav-link">Find Pets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link active">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="adoption-form.html" class="btn-primary">Adopt Now</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>News & Events</h1>
+            <p>Stay updated with our latest stories, events, and announcements</p>
+        </div>
+    </section>
+
+    <!-- News Filter -->
+    <section class="news-filter-section">
+        <div class="container">
+            <div class="news-filters">
+                <button class="filter-btn active" data-category="all">All News</button>
+                <button class="filter-btn" data-category="events">Events</button>
+                <button class="filter-btn" data-category="success-stories">Success Stories</button>
+                <button class="filter-btn" data-category="announcements">Announcements</button>
+                <button class="filter-btn" data-category="tips">Pet Care Tips</button>
+                <button class="filter-btn" data-category="volunteer">Volunteer News</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article-section">
+        <div class="container">
+            <article class="featured-article">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&h=600&fit=crop" alt="Spring Adoption Fair">
+                    <span class="article-badge">Featured</span>
+                </div>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="article-category">Event</span>
+                        <span class="article-date">March 1, 2025</span>
+                    </div>
+                    <h2><a href="news-article.html">Spring Adoption Fair - March 15-16: Find Your Perfect Companion</a></h2>
+                    <p>Join us for our biggest adoption event of the year! Two days of fun, activities, and the chance to meet dozens of adoptable pets. Special adoption discounts, free pet supplies for new adopters, and expert advice from our staff.</p>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" alt="Sarah Johnson">
+                            <span>By Sarah Johnson</span>
+                        </div>
+                        <a href="news-article.html" class="read-more-btn">Read Full Story →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-grid-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- News Article 1 -->
+                <article class="news-card" data-category="success-stories">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=250&fit=crop" alt="Max finds home">
+                        <span class="article-category">Success Story</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 28, 2025</div>
+                        <h3><a href="news-article.html">Happy Ending: Max Finds His Forever Family After 8 Months</a></h3>
+                        <p>After spending 8 months in our shelter, Max the Golden Retriever has finally found his perfect match with the Anderson family...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 2 -->
+                <article class="news-card" data-category="volunteer">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=250&fit=crop" alt="Volunteer program">
+                        <span class="article-category">Volunteer</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 25, 2025</div>
+                        <h3><a href="news-article.html">New Volunteer Training Program Launches This Spring</a></h3>
+                        <p>We're excited to announce our comprehensive new volunteer training program designed to help more people get involved...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 3 -->
+                <article class="news-card" data-category="tips">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=400&h=250&fit=crop" alt="Pet care tips">
+                        <span class="article-category">Pet Care Tips</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 22, 2025</div>
+                        <h3><a href="news-article.html">5 Essential Tips for First-Time Pet Owners</a></h3>
+                        <p>Bringing a new pet home is exciting! Here are five crucial tips to ensure a smooth transition for both you and your new companion...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 4 -->
+                <article class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&h=250&fit=crop" alt="Pet yoga">
+                        <span class="article-category">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 20, 2025</div>
+                        <h3><a href="news-article.html">Puppy Yoga Sessions Return This Weekend</a></h3>
+                        <p>Our popular puppy yoga sessions are back! Join us for a relaxing yoga class while playing with adorable puppies...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 5 -->
+                <article class="news-card" data-category="announcements">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1415369629372-26f2fe60c467?w=400&h=250&fit=crop" alt="New facility">
+                        <span class="article-category">Announcement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 18, 2025</div>
+                        <h3><a href="news-article.html">Exciting News: New Cat Sanctuary Opening in April</a></h3>
+                        <p>We're thrilled to announce the opening of our new state-of-the-art cat sanctuary, providing more space for our feline friends...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 6 -->
+                <article class="news-card" data-category="success-stories">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=250&fit=crop" alt="Luna the cat">
+                        <span class="article-category">Success Story</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 15, 2025</div>
+                        <h3><a href="news-article.html">From Stray to Star: Luna's Incredible Journey</a></h3>
+                        <p>Once a frightened stray, Luna the Siamese cat is now thriving in her new home and even has her own Instagram account...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 7 -->
+                <article class="news-card" data-category="tips">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=250&fit=crop" alt="Senior dog care">
+                        <span class="article-category">Pet Care Tips</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 12, 2025</div>
+                        <h3><a href="news-article.html">Caring for Senior Pets: A Complete Guide</a></h3>
+                        <p>Senior pets have special needs. Learn how to provide the best care for your aging companion with our comprehensive guide...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 8 -->
+                <article class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8?w=400&h=250&fit=crop" alt="Dog walk event">
+                        <span class="article-category">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 10, 2025</div>
+                        <h3><a href="news-article.html">Annual Charity Dog Walk Raises $50,000</a></h3>
+                        <p>Our annual charity dog walk was a huge success, with over 500 participants and their furry friends joining us...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 9 -->
+                <article class="news-card" data-category="volunteer">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1469131792215-9c59b3b68678?w=400&h=250&fit=crop" alt="Volunteer spotlight">
+                        <span class="article-category">Volunteer</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 8, 2025</div>
+                        <h3><a href="news-article.html">Volunteer Spotlight: Meet John, Our Dog Walker Extraordinaire</a></h3>
+                        <p>John has been volunteering with us for 5 years, walking over 1,000 dogs. Learn about his journey and impact...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 10 -->
+                <article class="news-card" data-category="announcements">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1516222338250-863216ce01ea?w=400&h=250&fit=crop" alt="Partnership">
+                        <span class="article-category">Announcement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 5, 2025</div>
+                        <h3><a href="news-article.html">New Partnership with Local Pet Store Chain</a></h3>
+                        <p>We're excited to announce our partnership with PetMart, bringing adoption events to 10 locations across the city...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 11 -->
+                <article class="news-card" data-category="success-stories">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?w=400&h=250&fit=crop" alt="Bonded pair">
+                        <span class="article-category">Success Story</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">February 2, 2025</div>
+                        <h3><a href="news-article.html">Inseparable: Bonded Pair Finds Home Together</a></h3>
+                        <p>After months of waiting, bonded dogs Bella and Duke have found a family willing to adopt them together...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Article 12 -->
+                <article class="news-card" data-category="tips">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1545529468-42764ef8c85f?w=400&h=250&fit=crop" alt="Pet nutrition">
+                        <span class="article-category">Pet Care Tips</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="article-date">January 30, 2025</div>
+                        <h3><a href="news-article.html">Understanding Pet Nutrition: What Your Pet Really Needs</a></h3>
+                        <p>Proper nutrition is crucial for your pet's health. Our experts break down what to look for in pet food...</p>
+                        <a href="news-article.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn-load-more">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Never Miss an Update</h2>
+                    <p>Subscribe to our newsletter for the latest news and events</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="support-us.html">Volunteer</a></li>
+                        <li><a href="support-us.html">Foster</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="#">Pet Care Tips</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="shop/catalog.html">Pet Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="adoption-form.html">Adopt</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="adoption-form.html" class="btn-primary btn-block">Adopt Now</a>
+        </div>
+    </div>
+
+    <script src="js/main-script.js"></script>
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const newsCards = document.querySelectorAll('.news-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter news cards
+                const category = this.dataset.category;
+                
+                newsCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Load more functionality
+        document.querySelector('.btn-load-more').addEventListener('click', function() {
+            // In a real app, this would load more articles from the server
+            this.textContent = 'Loading...';
+            setTimeout(() => {
+                this.textContent = 'No More Articles';
+                this.disabled = true;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

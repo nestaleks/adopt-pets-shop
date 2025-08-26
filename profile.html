@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your profile and track adoption applications at Adopt Pets.">
+    <title>My Profile | Adopt Pets</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-right">
+                    <a href="profile.html" class="top-bar-link">👤 Profile</a>
+                    <a href="auth.html" class="top-bar-link">Login</a>
+                    <a href="donate.html" class="top-bar-link">Donate</a>
+                    <a href="contact.html" class="top-bar-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">
+                            <strong>ADOPT</strong>
+                            <span>PETS</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">Find Pets</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Browse by Type</h3>
+                                        <ul>
+                                            <li><a href="#">🐕 Dogs</a></li>
+                                            <li><a href="#">🐈 Cats</a></li>
+                                            <li><a href="#">🐰 Rabbits</a></li>
+                                            <li><a href="#">🦜 Birds</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Adoption Info</h3>
+                                        <ul>
+                                            <li><a href="how-it-works.html">How It Works</a></li>
+                                            <li><a href="adoption-form.html">Application Form</a></li>
+                                            <li><a href="#">Requirements</a></li>
+                                            <li><a href="#">Fees & Costs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop/catalog.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="adoption-form.html" class="nav-link">Adopt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="support-us.html" class="nav-link">Support Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="profile.html" class="btn-primary">My Account</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <div class="profile-hero-content">
+                <div class="profile-avatar-large">JD</div>
+                <div class="profile-info">
+                    <h1 class="profile-name">John Doe</h1>
+                    <p class="profile-email">john.doe@example.com</p>
+                    <span class="member-badge">🌟 Member since January 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-wrapper">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <a href="#overview" class="profile-nav-item active" data-section="overview">
+                            <span class="profile-nav-icon">📊</span>
+                            <span>Overview</span>
+                        </a>
+                        <a href="#personal" class="profile-nav-item" data-section="personal">
+                            <span class="profile-nav-icon">👤</span>
+                            <span>Personal Info</span>
+                        </a>
+                        <a href="#applications" class="profile-nav-item" data-section="applications">
+                            <span class="profile-nav-icon">📝</span>
+                            <span>Applications</span>
+                        </a>
+                        <a href="#favorites" class="profile-nav-item" data-section="favorites">
+                            <span class="profile-nav-icon">❤️</span>
+                            <span>Favorites</span>
+                        </a>
+                        <a href="#orders" class="profile-nav-item" data-section="orders">
+                            <span class="profile-nav-icon">🛍️</span>
+                            <span>Order History</span>
+                        </a>
+                        <a href="#messages" class="profile-nav-item" data-section="messages">
+                            <span class="profile-nav-icon">💬</span>
+                            <span>Messages</span>
+                        </a>
+                        <a href="#settings" class="profile-nav-item" data-section="settings">
+                            <span class="profile-nav-icon">⚙️</span>
+                            <span>Settings</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="profile-content">
+                    <!-- Overview Section -->
+                    <section id="overview" class="profile-section active">
+                        <div class="section-header">
+                            <h2>Welcome Back, John!</h2>
+                            <p>Here's an overview of your adoption journey</p>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">📝</div>
+                                <div class="stat-info">
+                                    <div class="stat-number">3</div>
+                                    <div class="stat-label">Total Applications</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">❤️</div>
+                                <div class="stat-info">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">Favorite Pets</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">✅</div>
+                                <div class="stat-info">
+                                    <div class="stat-number">1</div>
+                                    <div class="stat-label">Adopted Pets</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom: 25px; color: var(--color-secondary-text);">Recent Activity</h3>
+                        <div class="activity-timeline">
+                            <div class="activity-item">
+                                <div class="activity-header">
+                                    <span class="activity-title">Application submitted for Max</span>
+                                    <span class="activity-date">2 days ago</span>
+                                </div>
+                                <div class="activity-content">
+                                    Your application for Max (Golden Retriever) is under review.
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-header">
+                                    <span class="activity-title">Added Luna to favorites</span>
+                                    <span class="activity-date">5 days ago</span>
+                                </div>
+                                <div class="activity-content">
+                                    You saved Luna (Persian Cat) to your favorites list.
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-header">
+                                    <span class="activity-title">Profile updated</span>
+                                    <span class="activity-date">1 week ago</span>
+                                </div>
+                                <div class="activity-content">
+                                    You updated your contact information.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Personal Info Section -->
+                    <section id="personal" class="profile-section">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <p>Manage your personal details and contact information</p>
+                        </div>
+
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john.doe@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 (555) 123-4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" value="123 Main Street">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" value="New York">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" value="NY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code</label>
+                                    <input type="text" id="zip" value="10001">
+                                </div>
+                            </div>
+                            
+                            <div class="btn-group">
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                                <button type="button" class="btn-secondary">Cancel</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Applications Section -->
+                    <section id="applications" class="profile-section">
+                        <div class="section-header">
+                            <h2>My Applications</h2>
+                            <p>Track the status of your adoption applications</p>
+                        </div>
+
+                        <div class="applications-list">
+                            <div class="application-card">
+                                <div class="application-pet">
+                                    <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=80&h=80&fit=crop" alt="Max">
+                                    <div class="application-pet-info">
+                                        <h3>Max</h3>
+                                        <p>Golden Retriever • Male • 2 years</p>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge status-pending">Pending Review</span>
+                                    <p class="application-date">Applied: Jan 15, 2025</p>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="pets/details.html" class="btn-secondary">View Pet</a>
+                                </div>
+                            </div>
+                            
+                            <div class="application-card">
+                                <div class="application-pet">
+                                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=80&h=80&fit=crop" alt="Luna">
+                                    <div class="application-pet-info">
+                                        <h3>Luna</h3>
+                                        <p>Persian Cat • Female • 3 years</p>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge status-approved">Approved</span>
+                                    <p class="application-date">Applied: Dec 20, 2024</p>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="pets/details.html" class="btn-secondary">View Pet</a>
+                                </div>
+                            </div>
+                            
+                            <div class="application-card">
+                                <div class="application-pet">
+                                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=80&h=80&fit=crop" alt="Charlie">
+                                    <div class="application-pet-info">
+                                        <h3>Charlie</h3>
+                                        <p>Labrador • Male • 1 year</p>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge status-rejected">Not Selected</span>
+                                    <p class="application-date">Applied: Nov 10, 2024</p>
+                                </div>
+                                <div class="application-actions">
+                                    <a href="pets/details.html" class="btn-secondary">View Pet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Favorites Section -->
+                    <section id="favorites" class="profile-section">
+                        <div class="section-header">
+                            <h2>Favorite Pets</h2>
+                            <p>Pets you've saved for later</p>
+                        </div>
+
+                        <div class="favorites-grid">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=280&fit=crop" alt="Luna">
+                                    <span class="pet-badge">Available</span>
+                                    <button class="favorite-btn active">❤️</button>
+                                </div>
+                                <div class="pet-info">
+                                    <h3>Luna</h3>
+                                    <p class="pet-details">Persian Cat • Female • 3 years</p>
+                                    <div class="pet-tags">
+                                        <span class="pet-tag">Calm</span>
+                                        <span class="pet-tag">Indoor</span>
+                                    </div>
+                                    <p class="pet-description">Beautiful Persian cat with a gentle personality...</p>
+                                    <button class="meet-btn">Meet Luna</button>
+                                </div>
+                            </div>
+                            
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=400&h=280&fit=crop" alt="Buddy">
+                                    <span class="pet-badge new">New</span>
+                                    <button class="favorite-btn active">❤️</button>
+                                </div>
+                                <div class="pet-info">
+                                    <h3>Buddy</h3>
+                                    <p class="pet-details">Beagle • Male • 6 months</p>
+                                    <div class="pet-tags">
+                                        <span class="pet-tag">Puppy</span>
+                                        <span class="pet-tag">Playful</span>
+                                    </div>
+                                    <p class="pet-description">Adorable Beagle puppy looking for a loving home...</p>
+                                    <button class="meet-btn">Meet Buddy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=280&fit=crop" alt="Milo">
+                                    <span class="pet-badge">Available</span>
+                                    <button class="favorite-btn active">❤️</button>
+                                </div>
+                                <div class="pet-info">
+                                    <h3>Milo</h3>
+                                    <p class="pet-details">Mixed Breed • Male • 4 years</p>
+                                    <div class="pet-tags">
+                                        <span class="pet-tag">Friendly</span>
+                                        <span class="pet-tag">Trained</span>
+                                    </div>
+                                    <p class="pet-description">Well-trained mixed breed dog, perfect for families...</p>
+                                    <button class="meet-btn">Meet Milo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Orders Section -->
+                    <section id="orders" class="profile-section">
+                        <div class="section-header">
+                            <h2>Order History</h2>
+                            <p>View your past purchases and track current orders</p>
+                        </div>
+
+                        <div class="orders-filters">
+                            <button class="filter-btn active" data-filter="all">All Orders</button>
+                            <button class="filter-btn" data-filter="pending">Pending</button>
+                            <button class="filter-btn" data-filter="processing">Processing</button>
+                            <button class="filter-btn" data-filter="shipped">Shipped</button>
+                            <button class="filter-btn" data-filter="delivered">Delivered</button>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #2025-001</h3>
+                                        <p class="order-date">January 18, 2025</p>
+                                    </div>
+                                    <div class="order-status">
+                                        <span class="status-badge status-shipped">Shipped</span>
+                                        <p class="order-total">$125.99</p>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=60&h=60&fit=crop" alt="Premium Dog Food">
+                                        <div class="item-details">
+                                            <h4>Premium Dog Food - Large Breed</h4>
+                                            <p>Quantity: 2 × $45.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1581888227599-779811939961?w=60&h=60&fit=crop" alt="Dog Toys">
+                                        <div class="item-details">
+                                            <h4>Interactive Dog Toy Set</h4>
+                                            <p>Quantity: 1 × $34.01</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-tracking">
+                                    <p>📦 Tracking: <a href="#" class="tracking-link">1Z999AA10123456784</a></p>
+                                    <p>Expected delivery: January 21, 2025</p>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-secondary">View Details</button>
+                                    <button class="btn-outline">Track Package</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #2024-089</h3>
+                                        <p class="order-date">December 15, 2024</p>
+                                    </div>
+                                    <div class="order-status">
+                                        <span class="status-badge status-delivered">Delivered</span>
+                                        <p class="order-total">$89.50</p>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=60&h=60&fit=crop" alt="Cat Litter">
+                                        <div class="item-details">
+                                            <h4>Premium Cat Litter - 40lb</h4>
+                                            <p>Quantity: 2 × $24.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=60&h=60&fit=crop" alt="Cat Food">
+                                        <div class="item-details">
+                                            <h4>Gourmet Cat Food Variety Pack</h4>
+                                            <p>Quantity: 1 × $39.52</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-secondary">View Details</button>
+                                    <button class="btn-outline">Reorder</button>
+                                    <button class="btn-outline">Leave Review</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-info">
+                                        <h3>Order #2024-072</h3>
+                                        <p class="order-date">November 28, 2024</p>
+                                    </div>
+                                    <div class="order-status">
+                                        <span class="status-badge status-delivered">Delivered</span>
+                                        <p class="order-total">$215.00</p>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1545594861-1c80edd65d9a?w=60&h=60&fit=crop" alt="Pet Bed">
+                                        <div class="item-details">
+                                            <h4>Orthopedic Pet Bed - XL</h4>
+                                            <p>Quantity: 1 × $149.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <img src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?w=60&h=60&fit=crop" alt="Grooming Kit">
+                                        <div class="item-details">
+                                            <h4>Professional Grooming Kit</h4>
+                                            <p>Quantity: 1 × $65.01</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-secondary">View Details</button>
+                                    <button class="btn-outline">Reorder</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled>Previous</button>
+                            <span class="pagination-info">Page 1 of 3</span>
+                            <button class="pagination-btn">Next</button>
+                        </div>
+                    </section>
+
+                    <!-- Messages Section -->
+                    <section id="messages" class="profile-section">
+                        <div class="section-header">
+                            <h2>Messages</h2>
+                            <p>Communication with shelter staff and adoption coordinators</p>
+                        </div>
+
+                        <div class="messages-container">
+                            <div class="conversations-list">
+                                <h3>Conversations</h3>
+                                <div class="conversation-item active" data-conversation="1">
+                                    <div class="conversation-avatar">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop" alt="Sarah">
+                                    </div>
+                                    <div class="conversation-details">
+                                        <div class="conversation-header">
+                                            <h4>Sarah Johnson</h4>
+                                            <span class="conversation-time">10:30 AM</span>
+                                        </div>
+                                        <p class="conversation-preview">Hi John! Great news about Max...</p>
+                                        <span class="conversation-badge">Adoption Coordinator</span>
+                                    </div>
+                                    <span class="unread-count">2</span>
+                                </div>
+
+                                <div class="conversation-item" data-conversation="2">
+                                    <div class="conversation-avatar">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" alt="Mike">
+                                    </div>
+                                    <div class="conversation-details">
+                                        <div class="conversation-header">
+                                            <h4>Mike Peterson</h4>
+                                            <span class="conversation-time">Yesterday</span>
+                                        </div>
+                                        <p class="conversation-preview">Your order has been shipped!</p>
+                                        <span class="conversation-badge">Customer Service</span>
+                                    </div>
+                                </div>
+
+                                <div class="conversation-item" data-conversation="3">
+                                    <div class="conversation-avatar">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop" alt="Emily">
+                                    </div>
+                                    <div class="conversation-details">
+                                        <div class="conversation-header">
+                                            <h4>Dr. Emily Chen</h4>
+                                            <span class="conversation-time">Jan 15</span>
+                                        </div>
+                                        <p class="conversation-preview">Luna's health records are ready</p>
+                                        <span class="conversation-badge">Veterinarian</span>
+                                    </div>
+                                </div>
+
+                                <div class="conversation-item" data-conversation="4">
+                                    <div class="conversation-avatar">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop" alt="David">
+                                    </div>
+                                    <div class="conversation-details">
+                                        <div class="conversation-header">
+                                            <h4>David Brown</h4>
+                                            <span class="conversation-time">Jan 10</span>
+                                        </div>
+                                        <p class="conversation-preview">Thank you for your donation!</p>
+                                        <span class="conversation-badge">Shelter Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-window">
+                                <div class="chat-header">
+                                    <div class="chat-user-info">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" alt="Sarah">
+                                        <div>
+                                            <h4>Sarah Johnson</h4>
+                                            <p>Adoption Coordinator • Online</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-actions">
+                                        <button class="chat-action-btn" title="Phone">📞</button>
+                                        <button class="chat-action-btn" title="Video">📹</button>
+                                        <button class="chat-action-btn" title="Info">ℹ️</button>
+                                    </div>
+                                </div>
+
+                                <div class="chat-messages">
+                                    <div class="message-date">Today</div>
+                                    
+                                    <div class="message received">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                        <div class="message-content">
+                                            <p>Hi John! I have great news about your application for Max.</p>
+                                            <span class="message-time">10:30 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message received">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                        <div class="message-content">
+                                            <p>Your application has been approved! 🎉</p>
+                                            <span class="message-time">10:30 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message sent">
+                                        <div class="message-content">
+                                            <p>That's wonderful news! When can I come meet Max?</p>
+                                            <span class="message-time">10:35 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message received">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                        <div class="message-content">
+                                            <p>You can visit Max anytime this week between 10 AM and 6 PM. Would tomorrow at 2 PM work for you?</p>
+                                            <span class="message-time">10:37 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message sent">
+                                        <div class="message-content">
+                                            <p>Tomorrow at 2 PM is perfect! Should I bring anything specific?</p>
+                                            <span class="message-time">10:40 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message received">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                        <div class="message-content">
+                                            <p>Just bring your ID and the adoption fee of $250. We'll have all the paperwork ready for you.</p>
+                                            <span class="message-time">10:42 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="message received">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                        <div class="message-content">
+                                            <div class="message-attachment">
+                                                <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=200&h=150&fit=crop" alt="Max">
+                                                <p>Max is so excited to meet you! 🐕</p>
+                                            </div>
+                                            <span class="message-time">10:43 AM</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="chat-input">
+                                    <button class="attach-btn" title="Attach file">📎</button>
+                                    <input type="text" placeholder="Type your message..." class="message-input">
+                                    <button class="emoji-btn" title="Emoji">😊</button>
+                                    <button class="send-btn" title="Send">➤</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Settings Section -->
+                    <section id="settings" class="profile-section">
+                        <div class="section-header">
+                            <h2>Settings</h2>
+                            <p>Manage your account preferences and privacy</p>
+                        </div>
+
+                        <div class="settings-sections">
+                            <div class="settings-group">
+                                <h3>Account Preferences</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Language</span>
+                                        <span class="setting-description">Choose your preferred language</span>
+                                    </div>
+                                    <select class="setting-select">
+                                        <option>English</option>
+                                        <option>Español</option>
+                                        <option>Français</option>
+                                        <option>Deutsch</option>
+                                        <option>Italiano</option>
+                                        <option>Português</option>
+                                    </select>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Time Zone</span>
+                                        <span class="setting-description">Set your local time zone</span>
+                                    </div>
+                                    <select class="setting-select">
+                                        <option>Eastern Time (UTC-5)</option>
+                                        <option>Central Time (UTC-6)</option>
+                                        <option>Mountain Time (UTC-7)</option>
+                                        <option>Pacific Time (UTC-8)</option>
+                                    </select>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Currency</span>
+                                        <span class="setting-description">Display prices in your currency</span>
+                                    </div>
+                                    <select class="setting-select">
+                                        <option>USD ($)</option>
+                                        <option>EUR (€)</option>
+                                        <option>GBP (£)</option>
+                                        <option>CAD (C$)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Notifications</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Email Notifications</span>
+                                        <span class="setting-description">Receive updates via email</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">SMS Notifications</span>
+                                        <span class="setting-description">Get text messages for important updates</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Push Notifications</span>
+                                        <span class="setting-description">Browser notifications for real-time updates</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Newsletter</span>
+                                        <span class="setting-description">Weekly updates about new pets and events</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Application Updates</span>
+                                        <span class="setting-description">Status changes for your adoption applications</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Privacy</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Profile Visibility</span>
+                                        <span class="setting-description">Control who can see your profile</span>
+                                    </div>
+                                    <select class="setting-select">
+                                        <option>Public</option>
+                                        <option>Shelter Staff Only</option>
+                                        <option>Private</option>
+                                    </select>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Show Online Status</span>
+                                        <span class="setting-description">Let others see when you're online</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Activity Tracking</span>
+                                        <span class="setting-description">Help us improve with usage analytics</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Security</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Password</span>
+                                        <span class="setting-description">Last changed 30 days ago</span>
+                                    </div>
+                                    <button class="btn-secondary">Change Password</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Two-Factor Authentication</span>
+                                        <span class="setting-description">Add an extra layer of security</span>
+                                    </div>
+                                    <div class="switch-container">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Login Sessions</span>
+                                        <span class="setting-description">Manage your active sessions</span>
+                                    </div>
+                                    <button class="btn-secondary">View Sessions</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Connected Accounts</span>
+                                        <span class="setting-description">Social media and third-party logins</span>
+                                    </div>
+                                    <button class="btn-secondary">Manage</button>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h3>Data & Storage</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Download My Data</span>
+                                        <span class="setting-description">Get a copy of all your account data</span>
+                                    </div>
+                                    <button class="btn-secondary">Request Download</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Clear Cache</span>
+                                        <span class="setting-description">Remove temporary files and data</span>
+                                    </div>
+                                    <button class="btn-secondary">Clear Cache</button>
+                                </div>
+                            </div>
+
+                            <div class="settings-group danger-zone">
+                                <h3>Danger Zone</h3>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Deactivate Account</span>
+                                        <span class="setting-description">Temporarily disable your account</span>
+                                    </div>
+                                    <button class="btn-warning">Deactivate</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <span class="setting-label">Delete Account</span>
+                                        <span class="setting-description">Permanently remove your account and data</span>
+                                    </div>
+                                    <button class="btn-danger">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Get updates on new pets, events, and special offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="pets/catalog.html">Browse Pets</a></li>
+                        <li><a href="how-it-works.html">Adoption Process</a></li>
+                        <li><a href="adoption-form.html">Application Form</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pet Care</h4>
+                    <ul>
+                        <li><a href="#">Health Tips</a></li>
+                        <li><a href="#">Training Guides</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Foster</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                    <p class="contact-info">
+                        📞 1-800-PETLOVE<br>
+                        ✉️ info@adoptpets.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>© 2025 Adopt Pets. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">ADOPT PETS</span>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pets/catalog.html">Find Pets</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="shop/catalog.html">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="profile.html" class="btn-primary btn-block">My Account</a>
+        </div>
+    </div>
+
+    <script src="js/main-script.js"></script>
+    <script>
+        // Profile navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.profile-nav-item');
+            const sections = document.querySelectorAll('.profile-section');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active from all
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    sections.forEach(section => section.classList.remove('active'));
+                    
+                    // Add active to clicked
+                    this.classList.add('active');
+                    const targetSection = this.getAttribute('data-section');
+                    document.getElementById(targetSection).classList.add('active');
+                });
+            });
+            
+            // Form submission
+            document.querySelector('.profile-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Profile updated successfully!');
+            });
+            
+            // Settings toggles
+            document.querySelectorAll('.switch input').forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    console.log('Setting changed:', this.checked);
+                });
+            });
+            
+            // Settings buttons
+            document.querySelectorAll('.settings-group .btn-secondary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.textContent;
+                    if (action === 'Change Password') {
+                        showPasswordChangeModal();
+                    } else if (action === 'View Sessions') {
+                        alert('Active sessions view coming soon!');
+                    } else if (action === 'Manage') {
+                        alert('Connected accounts management coming soon!');
+                    } else if (action === 'Request Download') {
+                        alert('Data download request submitted! You will receive an email when your data is ready.');
+                    } else if (action === 'Clear Cache') {
+                        if (confirm('Clear all cached data?')) {
+                            localStorage.clear();
+                            sessionStorage.clear();
+                            alert('Cache cleared successfully!');
+                        }
+                    }
+                });
+            });
+            
+            // Warning button
+            document.querySelector('.btn-warning').addEventListener('click', function() {
+                if (confirm('Are you sure you want to deactivate your account? You can reactivate it anytime by logging in.')) {
+                    alert('Account deactivated. You have been logged out.');
+                    localStorage.removeItem('isLoggedIn');
+                    window.location.href = 'auth.html';
+                }
+            });
+            
+            // Delete account
+            document.querySelector('.btn-danger').addEventListener('click', function() {
+                const confirmDelete = prompt('To delete your account, type DELETE in the box below:');
+                if (confirmDelete === 'DELETE') {
+                    if (confirm('This action is irreversible. Are you absolutely sure?')) {
+                        alert('Account deletion request submitted. You will receive a confirmation email.');
+                        localStorage.removeItem('isLoggedIn');
+                        window.location.href = 'index.html';
+                    }
+                }
+            });
+            
+            // Password change modal
+            function showPasswordChangeModal() {
+                const modal = document.createElement('div');
+                modal.className = 'modal-overlay';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <h2>Change Password</h2>
+                        <form id="passwordChangeForm">
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" id="newPassword" required minlength="8">
+                                <small style="color: var(--color-subtext);">Minimum 8 characters</small>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm New Password</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                            <div class="btn-group">
+                                <button type="submit" class="btn-primary">Update Password</button>
+                                <button type="button" class="btn-secondary" onclick="this.closest('.modal-overlay').remove()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+                
+                document.getElementById('passwordChangeForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const newPass = document.getElementById('newPassword').value;
+                    const confirmPass = document.getElementById('confirmPassword').value;
+                    
+                    if (newPass !== confirmPass) {
+                        alert('Passwords do not match!');
+                        return;
+                    }
+                    
+                    alert('Password updated successfully!');
+                    modal.remove();
+                });
+            }
+            
+            // Save settings changes
+            document.querySelectorAll('.setting-select').forEach(select => {
+                select.addEventListener('change', function() {
+                    console.log('Setting changed:', this.value);
+                    // Save to localStorage or server
+                    localStorage.setItem(this.parentElement.querySelector('.setting-label').textContent, this.value);
+                });
+            });
+            
+            // Favorite pet cards
+            document.querySelectorAll('.favorites-grid .meet-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    window.location.href = 'pets/details.html';
+                });
+            });
+            
+            // Auth check disabled - will be implemented later
+            // const isLoggedIn = localStorage.getItem('isLoggedIn');
+            
+            // Order filters
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    // Filter logic would go here
+                    console.log('Filter by:', this.getAttribute('data-filter'));
+                });
+            });
+            
+            // Order actions
+            document.querySelectorAll('.order-card .btn-secondary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Order details view coming soon!');
+                });
+            });
+            
+            document.querySelectorAll('.order-card .btn-outline').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.textContent;
+                    if (action === 'Track Package') {
+                        alert('Package tracking coming soon!');
+                    } else if (action === 'Reorder') {
+                        alert('Reorder functionality coming soon!');
+                    } else if (action === 'Leave Review') {
+                        alert('Review system coming soon!');
+                    }
+                });
+            });
+            
+            // Messages functionality
+            document.querySelectorAll('.conversation-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active from all
+                    document.querySelectorAll('.conversation-item').forEach(c => c.classList.remove('active'));
+                    // Add active to clicked
+                    this.classList.add('active');
+                    
+                    // Remove unread count
+                    const unreadCount = this.querySelector('.unread-count');
+                    if (unreadCount) {
+                        unreadCount.remove();
+                    }
+                    
+                    // Load conversation (in real app, would fetch from server)
+                    console.log('Loading conversation:', this.getAttribute('data-conversation'));
+                });
+            });
+            
+            // Send message
+            const messageInput = document.querySelector('.message-input');
+            const sendBtn = document.querySelector('.send-btn');
+            
+            if (messageInput && sendBtn) {
+                const sendMessage = () => {
+                    const message = messageInput.value.trim();
+                    if (message) {
+                        // Add message to chat (in real app, would send to server)
+                        const messagesContainer = document.querySelector('.chat-messages');
+                        const typingIndicator = document.querySelector('.typing-indicator');
+                        
+                        const newMessage = document.createElement('div');
+                        newMessage.className = 'message sent';
+                        newMessage.innerHTML = `
+                            <div class="message-content">
+                                <p>${message}</p>
+                                <span class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                            </div>
+                        `;
+                        
+                        messagesContainer.insertBefore(newMessage, typingIndicator);
+                        messageInput.value = '';
+                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        
+                        // Simulate response
+                        setTimeout(() => {
+                            typingIndicator.style.display = 'flex';
+                            setTimeout(() => {
+                                typingIndicator.style.display = 'none';
+                                const response = document.createElement('div');
+                                response.className = 'message received';
+                                response.innerHTML = `
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=30&h=30&fit=crop" alt="Sarah" class="message-avatar">
+                                    <div class="message-content">
+                                        <p>Thanks for your message! I'll get back to you soon.</p>
+                                        <span class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                                    </div>
+                                `;
+                                messagesContainer.insertBefore(response, typingIndicator);
+                                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                            }, 2000);
+                        }, 500);
+                    }
+                };
+                
+                sendBtn.addEventListener('click', sendMessage);
+                messageInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
+            
+            // Chat action buttons
+            document.querySelectorAll('.chat-action-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.getAttribute('title');
+                    alert(`${action} functionality coming soon!`);
+                });
+            });
+            
+            // Attach file button
+            const attachBtn = document.querySelector('.attach-btn');
+            if (attachBtn) {
+                attachBtn.addEventListener('click', function() {
+                    alert('File attachment coming soon!');
+                });
+            }
+            
+            // Emoji button
+            const emojiBtn = document.querySelector('.emoji-btn');
+            if (emojiBtn) {
+                emojiBtn.addEventListener('click', function() {
+                    alert('Emoji picker coming soon!');
+                });
+            }
+            
+            // Pagination
+            document.querySelectorAll('.pagination-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (!this.disabled) {
+                        alert('Pagination functionality coming soon!');
+                    }
+                });
+            });
+            
+            // Initially hide typing indicator
+            const typingIndicator = document.querySelector('.typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
